@@ -24,14 +24,14 @@ const NeuralBackground = () => {
     });
 
     const nodes = [];
-    const nodeCount = 100;
+    const nodeCount = 250;
 
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 1) * 1.5,
-        vy: (Math.random() - 1) * 1.5
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5
       });
     }
 
@@ -60,7 +60,7 @@ const NeuralBackground = () => {
 
           if (dist < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 255, 171, ${1 - dist / 120})`;
+            ctx.strokeStyle = `rgba(0, 255, 170, ${1 - dist / 120})`;
             ctx.lineWidth = 1;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
