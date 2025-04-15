@@ -15,6 +15,11 @@ export default function Home() {
     );
 
     document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+
+    const script = document.createElement('script');
+    script.src = '/background.js';
+    script.async = true;
+    document.body.appendChild(script);
   }, []);
 
   const divisions = [
