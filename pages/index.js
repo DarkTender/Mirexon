@@ -5,10 +5,16 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // INTRO LOADER
-    const timer = setTimeout(() => setLoading(false), 3000);
+    // INTRO TIMEOUT
+    const timer = setTimeout(() => {
+      const loader = document.getElementById("intro-loader");
+      if (loader) {
+        loader.classList.add("fade-out");
+        setTimeout(() => setLoading(false), 1000); // extra 1s delay for smooth transition
+      }
+    }, 3000);
 
-    // FADE IN ON SCROLL
+    // CANVAS + SCROLL EFFECTS
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -19,7 +25,6 @@ export default function Home() {
 
     document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
 
-    // Load canvas script
     const script = document.createElement('script');
     script.src = '/background.js';
     script.async = true;
@@ -37,10 +42,11 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center text-cyan-400 animate-fade-in">
-        <img src="/logo.png" className="w-20 h-20 mb-4 animate-pulse" />
-        <h1 className="text-3xl font-bold tracking-widest">MIREXON™</h1>
-        <p className="mt-2 text-sm text-gray-400">Loading neural systems...</p>
+      <div id="intro-loader" className="fixed inset-0 z-50 flex flex-col items-center justify-center text-cyan-400 bg-black animated-intro">
+        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-br from-cyan-800 via-black to-blue-900 animate-gradientMove opacity-30 z-0" />
+        <img src="/logo.png" className="w-20 h-20 mb-4 z-10 animate-pulse" />
+        <h1 className="text-3xl font-bold tracking-widest z-10">MIREXON™</h1>
+        <p className="mt-2 text-sm text-gray-400 z-10">Loading neural systems...</p>
       </div>
     );
   }
