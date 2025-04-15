@@ -1,9 +1,17 @@
 
 import { useEffect, useState } from 'react';
+import NeuralBackground from '../components/NeuralBackground';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-
+    return (
+    <>
+      <NeuralBackground />
+      <main className="relative z-10 flex items-center justify-center h-screen text-white">
+        <h1 className="text-4xl font-bold tracking-widest text-cyan-400">MIREXON™ INTERACTIVE</h1>
+      </main>
+    </>
+  );
   useEffect(() => {
     // INTRO TIMEOUT
     const timer = setTimeout(() => {
@@ -26,7 +34,7 @@ export default function Home() {
     document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
 
     const script = document.createElement('script');
-    script.src = '/background.js';
+    script.src = '';
     script.async = true;
     document.body.appendChild(script);
 
