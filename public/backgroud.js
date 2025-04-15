@@ -1,72 +1,114 @@
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
-const ctx = canvas.getContext('2d');
+import { useEffect, useRef } from 'react';
 
-let width, height;
-let points = [];
+const NeuralBackground = () => {
+  const canvasRef = useRef();
 
-function resizeCanvas() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
-function createPoints(numPoints) {
-  points = [];
-  for (let i = 0; i < numPoints; i++) {
-    points.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5
+    const resizeCanvas = () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener('resize', resizeCanvas);
+
+    const mouse = { x: null, y: null };
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.x;
+      mouse.y = e.y;
     });
-  }
-}
-createPoints(100);
 
-let mouse = { x: null, y: null };
-canvas.addEventListener('mousemove', e => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-});
+    const nodes = [];
+    const nodeCount = 100;
 
-function drawLine(p1, p2, maxDist) {
-  const dx = p1.x - p2.x;
-  const dy = p1.y - p2.y;
-  const dist = Math.sqrt(dx * dx + dy * dy);
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5
+      });
+    }
 
-  if (dist < maxDist) {
-    const alpha = 1 - dist / maxDist;
-    ctx.strokeStyle = `rgba(0, 255, 180, ${alpha})`;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(p1.x, p1.y);
-    ctx.lineTo(p2.x, p2.y);
-    ctx.stroke();
-  }
-}
+    const animate = () => {
+      ctx.clearRect(0, 0, width, height);
 
-function animate() {
-  ctx.fillStyle = 'rgba(10, 10, 20, 0.5)';
-  ctx.fillRect(0, 0, width, height);
+      for (let i = 0; i < nodeCount; i++) {
+        const n = nodes[i];
+        n.x += n.vx;
+        n.y += n.vy;
 
-  points.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
+        if (n.x < 0 || n.x > width) n.vx *= -1;
+        if (n.y < 0 || n.y > height) n.vy *= -1;
 
-    if (p.x <= 0 || p.x >= width) p.vx *= -1;
-    if (p.y <= 0 || p.y >= height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#00ffaa';
+        ctx.fill();
+      }
 
-    ctx.fillStyle = '#00ffcc';
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-    ctx.fill();
+      for (let i = 0; i < nodeCount; i++) {
+        for (let j = i + 1; j < nodeCount; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
 
-    points.forEach(other => drawLine(p, other, 120));
-    if (mouse.x && mouse.y) drawLine(p, mouse, 150);
-  });
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 255, 170, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
 
-  requestAnimationFrame(animate);
-}
-animate();
+      if (mouse.x && mouse.y) {
+        for (let i = 0; i < nodeCount; i++) {
+          const dx = nodes[i].x - mouse.x;
+          const dy = nodes[i].y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(255, 0, 180, ${1 - dist / 150})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        width: '100%',
+        height: '100%',
+        background: '#0e0e0e'
+      }}
+    />
+  );
+};
+
+export default NeuralBackground;
