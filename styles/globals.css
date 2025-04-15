@@ -33,3 +33,25 @@ body {
 .animate-fade-up {
   animation: fadeUp 1s ease-out forwards;
 }
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-intro {
+  background: linear-gradient(270deg, #00ffff, #000000, #0000ff);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
