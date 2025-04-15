@@ -44,8 +44,8 @@ export default function Home() {
     return (
       <div id="intro-loader" className="fixed inset-0 z-50 flex flex-col items-center justify-center text-cyan-400 bg-black animated-intro">
         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-br from-cyan-800 via-black to-blue-900 animate-gradientMove opacity-30 z-0" />
-        <img src="/logo.png" className="w-20 h-20 mb-4 z-10 animate-pulse" />
-        <h1 className="text-3xl font-bold tracking-widest z-10">MIREXON™</h1>
+        <img className="w-20 h-20 mb-4 z-10 animate-pulse" />
+        <h1 className="text-5xl font-bold tracking-widest z-10">MIREXON™</h1>
         <p className="mt-2 text-sm text-gray-400 z-10">Loading neural systems...</p>
       </div>
     );
