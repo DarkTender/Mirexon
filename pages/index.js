@@ -53,6 +53,7 @@ export default function Home() {
 
   return (
     <>
+    <NeuralBackground />
       <canvas id="bgCanvas" className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
       <main className="relative z-10 min-h-screen px-4 py-12 text-center space-y-32 text-white">
         <section className="fade-section">
