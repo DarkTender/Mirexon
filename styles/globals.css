@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   @apply bg-black text-white font-sans;
   font-family: 'Orbitron', sans-serif;
