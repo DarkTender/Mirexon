@@ -1,78 +1,72 @@
+const canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+const ctx = canvas.getContext('2d');
 
-document.addEventListener("DOMContentLoaded", function () {
-  const canvas = document.getElementById("bgCanvas");
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+let width, height;
+let points = [];
 
-  const nodes = [];
-  const totalNodes = 80;
-  const maxDist = 160;
+function resizeCanvas() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
-  class Node {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = Math.random() * 0.8 - 0.4;
-      this.vy = Math.random() * 0.8 - 0.4;
-      this.radius = Math.random() * 1.5 + 1;
-    }
-
-    move() {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-      if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-      ctx.fillStyle = "rgba(0, 255, 200, 0.9)";
-      ctx.fill();
-    }
+function createPoints(numPoints) {
+  points = [];
+  for (let i = 0; i < numPoints; i++) {
+    points.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5
+    });
   }
+}
+createPoints(100);
 
-  function connectNodes() {
-    for (let i = 0; i < totalNodes; i++) {
-      for (let j = i + 1; j < totalNodes; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < maxDist) {
-          ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(0, 255, 255, ${1 - dist / maxDist})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = 0; i < totalNodes; i++) {
-      nodes[i].move();
-      nodes[i].draw();
-    }
-
-    connectNodes();
-    requestAnimationFrame(animate);
-  }
-
-  for (let i = 0; i < totalNodes; i++) {
-    nodes.push(new Node());
-  }
-
-  animate();
-
-  window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
+let mouse = { x: null, y: null };
+canvas.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
 });
+
+function drawLine(p1, p2, maxDist) {
+  const dx = p1.x - p2.x;
+  const dy = p1.y - p2.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+
+  if (dist < maxDist) {
+    const alpha = 1 - dist / maxDist;
+    ctx.strokeStyle = `rgba(0, 255, 180, ${alpha})`;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(p1.x, p1.y);
+    ctx.lineTo(p2.x, p2.y);
+    ctx.stroke();
+  }
+}
+
+function animate() {
+  ctx.fillStyle = 'rgba(10, 10, 20, 0.5)';
+  ctx.fillRect(0, 0, width, height);
+
+  points.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x <= 0 || p.x >= width) p.vx *= -1;
+    if (p.y <= 0 || p.y >= height) p.vy *= -1;
+
+    ctx.fillStyle = '#00ffcc';
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    points.forEach(other => drawLine(p, other, 120));
+    if (mouse.x && mouse.y) drawLine(p, mouse, 150);
+  });
+
+  requestAnimationFrame(animate);
+}
+animate();
