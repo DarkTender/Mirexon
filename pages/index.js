@@ -12,7 +12,7 @@ export default function Home() {
         loader.classList.add("fade-out");
         setTimeout(() => setLoading(false), 1000); // extra 1s delay for smooth transition
       }
-    }, 3000);
+    }, 3500);
 
     // CANVAS + SCROLL EFFECTS
     const observer = new IntersectionObserver(entries => {
@@ -21,7 +21,7 @@ export default function Home() {
           entry.target.classList.add('animate-fade-up');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
 
