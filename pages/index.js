@@ -40,24 +40,25 @@ export default function Home() {
           <button className="mt-6 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">LEARN MORE</button>
         </section>
 
-      {divisions.map((item, index) => (
-        <section key={index} className="fade-section max-w-3xl mx-auto border border-cyan-800 rounded-xl p-8 shadow-md hover:shadow-cyan-700 transition-all bg-black/30 backdrop-blur-md">
-          <h2 className="text-3xl text-cyan-300 font-semibold mb-2">{item.name}</h2>
-          <p className="text-gray-400 text-md mb-4">{item.desc}</p>
-          <a href={item.link} className="inline-block mt-2 px-5 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">Explore {item.name}</a>
-        </section>
-      ))}
+        {divisions.map((item, index) => (
+          <section key={index} className="fade-section max-w-3xl mx-auto border border-cyan-800 rounded-xl p-8 shadow-md hover:shadow-cyan-700 transition-all bg-black/40 backdrop-blur-md">
+            <h2 className="text-3xl text-cyan-300 font-semibold mb-2">{item.name}</h2>
+            <p className="text-gray-400 text-md mb-4">{item.desc}</p>
+            <a href={item.link} className="inline-block mt-2 px-5 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">Explore {item.name}</a>
+          </section>
+        ))}
 
-      <section className="fade-section grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-        <div className="text-center">
-          <h3 className="text-xl text-cyan-300 mb-2">ACCESS</h3>
-          <a href="/access" className="inline-block px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">GET STARTED</a>
-        </div>
-        <div className="text-center">
-          <h3 className="text-xl text-cyan-300 mb-2">PARTNER WITH US</h3>
-          <a href="/partner" className="inline-block px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">JOIN NOW</a>
-        </div>
-      </section>
-    </main>
+        <section className="fade-section grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="text-center">
+            <h3 className="text-xl text-cyan-300 mb-2">ACCESS</h3>
+            <a href="/access" className="inline-block px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">GET STARTED</a>
+          </div>
+          <div className="text-center">
+            <h3 className="text-xl text-cyan-300 mb-2">PARTNER WITH US</h3>
+            <a href="/partner" className="inline-block px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">JOIN NOW</a>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
