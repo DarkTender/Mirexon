@@ -2,12 +2,7 @@
 import Head from 'next/head';
 
 export default function Intelli() {
-  const products = [
-    { name: "MINDCORE AI", desc: "Neurónový engine pre pokročilé rozhodovanie a autonómiu", status: "ALPHA" },
-    { name: "SYNTHVOICE", desc: "Real-time AI hlas so schopnosťou emócií", status: "BETA" },
-    { name: "VISIONARY", desc: "Počítačové videnie s neurónovým mapovaním prostredia", status: "COMING SOON" },
-    { name: "LOGIX AI", desc: "Analytický modul pre dátové predikcie a stratégie", status: "LIVE" },
-  ];
+  const products = [{'name': 'MINDCORE AI', 'desc': 'Neurónový engine pre pokročilé rozhodovanie a autonómiu', 'status': 'ALPHA'}, {'name': 'SYNTHVOICE', 'desc': 'Real-time AI hlas so schopnosťou emócií', 'status': 'BETA'}, {'name': 'VISIONARY', 'desc': 'Počítačové videnie s neurónovým mapovaním prostredia', 'status': 'COMING SOON'}, {'name': 'LOGIX AI', 'desc': 'Analytický modul pre dátové predikcie a stratégie', 'status': 'LIVE'}, {'name': 'GENIMIND', 'desc': 'Tvorba hlbokého a zmysluplného obsahu poháňaná AI', 'status': 'BETA'}, {'name': 'NEURALINKER', 'desc': 'Prepojenie všetkých AI nástrojov do jednej synchronizovanej siete', 'status': 'DEV'}];
 
   return (
     <>
