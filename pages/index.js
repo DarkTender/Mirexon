@@ -30,13 +30,15 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-4 py-12 text-center space-y-32">
-      <section className="fade-section">
-        <img src="/logo.png" alt="MIREXON Logo" className="w-32 h-32 mx-auto mb-6 animate-pulse" />
-        <h1 className="text-5xl md:text-7xl font-bold text-cyan-400 tracking-widest">MIREXON™</h1>
-        <p className="text-lg md:text-xl text-gray-300 mt-4">Pioneering the future through intelligent technology.</p>
-        <button className="mt-6 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">LEARN MORE</button>
-      </section>
+    <>
+      <canvas id="bgCanvas" className="fixed top-0 left-0 z-0 w-full h-full"></canvas>
+      <main className="relative z-10 min-h-screen bg-transparent text-white px-4 py-12 text-center space-y-32">
+        <section className="fade-section">
+          <img src="/logo.png" alt="MIREXON Logo" className="w-32 h-32 mx-auto mb-6 animate-pulse" />
+          <h1 className="text-5xl md:text-7xl font-bold text-cyan-400 tracking-widest">MIREXON™</h1>
+          <p className="text-lg md:text-xl text-gray-300 mt-4">Pioneering the future through intelligent technology.</p>
+          <button className="mt-6 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">LEARN MORE</button>
+        </section>
 
       {divisions.map((item, index) => (
         <section key={index} className="fade-section max-w-3xl mx-auto border border-cyan-800 rounded-xl p-8 shadow-md hover:shadow-cyan-700 transition-all bg-black/30 backdrop-blur-md">
