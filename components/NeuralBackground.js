@@ -24,7 +24,7 @@ const NeuralBackground = () => {
     });
 
     const nodes = [];
-    const nodeCount = 250;
+    const nodeCount = 450;
 
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
