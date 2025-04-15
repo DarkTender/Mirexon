@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const NeuralBackground = () => {
+const background = () => {
   const canvasRef = useRef();
 
   useEffect(() => {
@@ -111,4 +111,4 @@ const NeuralBackground = () => {
   );
 };
 
-export default NeuralBackground;
+export default background;
