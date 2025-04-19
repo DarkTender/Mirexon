@@ -1,23 +1,32 @@
-
 export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ text: '❌ Iba POST metóda je povolená.' });
+  }
+
   const { prompt, tone } = req.body;
+
+  // Debug logovanie
+  console.log("➡️ PRÍCHOD požiadavky:");
+  console.log("Prompt:", prompt);
+  console.log("Tone:", tone);
+
+  if (!prompt || !tone) {
+    return res.status(400).json({ text: '⚠️ Chýba prompt alebo tone.' });
+  }
 
   const stylePrefix = {
     'Futuristický': "Napíš to ako futuristický vizionár:",
     'Filozofický': "Napíš to ako hlboký filozof:",
     'Revolučný': "Napíš to ako rebel, ktorý mení systém:"
-  }[tone] || "";
+  }[tone] || '';
 
   const systemPrompt = `${stylePrefix} ${prompt}`;
 
   try {
-    console.log("➡️ PRÍCHOD požiadavky:");
-    console.log("Prompt:", prompt);
-    console.log("Tone:", tone);
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer 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`,
+        'Authorization': `Bearer sk-...`, // ← TU daj svoj API kľúč
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -31,10 +40,16 @@ export default async function handler(req, res) {
     });
 
     const json = await response.json();
+
+    if (json.error) {
+      console.error("❌ OpenAI Error:", json.error);
+      return res.status(500).json({ text: `❌ OpenAI API chyba: ${json.error.message}` });
+    }
+
     const text = json.choices?.[0]?.message?.content?.trim();
     res.status(200).json({ text });
   } catch (error) {
-    console.error('Chyba v OpenAI API:', error);
-    res.status(500).json({ text: '⚠️ Chyba pri volaní AI.' });
+    console.error("❌ Chyba v API volaní:", error);
+    res.status(500).json({ text: '❌ Chyba pri volaní OpenAI API.' });
   }
 }
