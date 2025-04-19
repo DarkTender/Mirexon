@@ -11,6 +11,9 @@ export default async function handler(req, res) {
   const systemPrompt = `${stylePrefix} ${prompt}`;
 
   try {
+    console.log("➡️ PRÍCHOD požiadavky:");
+    console.log("Prompt:", prompt);
+    console.log("Tone:", tone);
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
