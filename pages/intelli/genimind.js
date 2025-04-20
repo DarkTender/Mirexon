@@ -1,22 +1,65 @@
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../auth/[...nextauth]"; // cesta môže byť iná podľa projektu
+import { decrementCredit } from "../../../lib/user";
 
-import Head from 'next/head';
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ text: '❌ Iba POST metóda je povolená.' });
+  }
 
-export default function Genimind() {
-  return (
-    <>
-      <Head>
-        <title>GENIMIND | MIREXON™</title>
-      </Head>
-      <main className="min-h-screen px-6 py-20 text-white bg-black text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-cyan-400 mb-8">GENIMIND</h1>
-        <p className="max-w-3xl mx-auto text-gray-400 text-lg mb-12">Generatívna AI pre obsah, texty, myšlienky a tvorbu s hĺbkou a filozofiou.</p>
-        <a href="/intelli/genimind/demo" className="inline-block mt-4 px-6 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black rounded transition">
-          Spustiť demo
-        </a>
-        <div className="mt-10">
-          <a href="/intelli" className="text-cyan-600 hover:underline">← Späť na INTELLI</a>
-        </div>
-      </main>
-    </>
-  );
+  const session = await getServerSession(req, res, authOptions);
+  const userEmail = session?.user?.email;
+
+  if (!userEmail) {
+    return res.status(401).json({ text: '❌ Neautorizovaný prístup. Musíš sa prihlásiť.' });
+  }
+
+  const kreditOk = await decrementCredit(userEmail);
+  if (!kreditOk) {
+    return res.status(403).json({ text: '⚠️ Nemáš dostatok kreditov na použitie GENIMIND™.' });
+  }
+
+  const { prompt, tone } = req.body;
+  if (!prompt || !tone) {
+    return res.status(400).json({ text: '⚠️ Chýba prompt alebo tone.' });
+  }
+
+  const stylePrefix = {
+    'Futuristický': "Napíš to ako futuristický vizionár:",
+    'Filozofický': "Napíš to ako hlboký filozof:",
+    'Revolučný': "Napíš to ako rebel, ktorý mení systém:"
+  }[tone] || '';
+
+  const systemPrompt = `${stylePrefix} ${prompt}`;
+
+  try {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: 'Si inteligentná, profesionálna AI s vizionárskym hlasom.' },
+          { role: 'user', content: systemPrompt }
+        ],
+        temperature: 0.8
+      }),
+    });
+
+    const json = await response.json();
+
+    if (json.error) {
+      console.error("❌ OpenAI Error:", json.error);
+      return res.status(500).json({ text: `❌ OpenAI API chyba: ${json.error.message}` });
+    }
+
+    const text = json.choices?.[0]?.message?.content?.trim();
+    res.status(200).json({ text });
+  } catch (error) {
+    console.error("❌ Chyba v API volaní:", error);
+    res.status(500).json({ text: '❌ Chyba pri volaní OpenAI API.' });
+  }
 }
