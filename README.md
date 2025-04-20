@@ -62,4 +62,4 @@ Ak chcete spustiť tento projekt lokálne, použite nasledujúce príkazy:
 1. **Klonujte repozitár**:
 
 ```bash
-git clone https://github.com/tvoj_užívateľ/mirexon.git
+git clone https://github.com/DarkTender/mirexon.git
