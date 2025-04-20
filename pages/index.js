@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useSession, signIn, signOut } from "next-auth/react";
 import NeuralBackground from '../components/NeuralBackground';
@@ -13,10 +12,11 @@ export default function Home() {
       const loader = document.getElementById("intro-loader");
       if (loader) {
         loader.classList.add("fade-out");
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => setLoading(false), 1000); // extra 1s delay for smooth transition
       }
     }, 3500);
 
+    // CANVAS + SCROLL EFFECTS
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
