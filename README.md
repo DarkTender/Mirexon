@@ -1,4 +1,12 @@
 # MIREXON™
+Mystery
+Intellect
+Revelation
+Existence
+Xeno
+Origin
+Neural
+
 
 MIREXON™ je **inovatívna technologická platforma**, ktorá kombinuje **pokročilé AI nástroje** a **technológie** na **transformáciu budúcnosti**. Cieľom je vytvoriť prostredie, ktoré bude slúžiť na riešenie komplexných problémov pomocou umelej inteligencie, špičkových nástrojov a efektívnych systémov. MIREXON™ je predurčený stať sa lídrom v oblasti **AI**, **spoločenských inovácií** a **pokročilých technológií**.
 
