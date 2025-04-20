@@ -1,39 +1,37 @@
-
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { MongoClient } from "mongodb";
-import { compare } from "bcryptjs";
-
-let client;
-async function connectToDatabase() {
-  if (!client) {
-    client = await MongoClient.connect(process.env.MONGODB_URI);
-  }
-  return client.db();
-}
 
 export default NextAuth({
-  session: {
-    strategy: "jwt"
-  },
   providers: [
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "text" },
+        email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        const db = await connectToDatabase();
-        const user = await db.collection("users").findOne({ email: credentials.email });
-
-        if (!user) throw new Error("E-mail neexistuje");
-        const isValid = await compare(credentials.password, user.password);
-        if (!isValid) throw new Error("Nesprávne heslo");
-
-        return { id: user._id, email: user.email };
+        const user = { email: credentials.email, password: credentials.password }; // Tu pridať kontrolu v DB
+        if (user) {
+          return user;
+        } else {
+          return null;
+        }
       }
     })
   ],
-  secret: process.env.NEXTAUTH_SECRET
+  session: {
+    strategy: "jwt" // Uchovávanie session v JWT
+  },
+  callbacks: {
+    async session({ session, token }) {
+      session.user.id = token.id; // Môžeš pridať ďalšie informácie, ako kredit
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id; // Uloženie ID používateľa
+      }
+      return token;
+    }
+  }
 });
