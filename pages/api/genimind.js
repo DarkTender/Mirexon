@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer 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`, // ← TU daj svoj API kľúč
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`, // 🔐 API kľúč z .env
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
