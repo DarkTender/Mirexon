@@ -1,0 +1,96 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(-45deg,#3b82f6,#6366f1,#06b6d4,#64748b);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.mirexon-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.letter-box {
+  width: 110px;
+  height: 140px;
+  perspective: 900px;
+  outline: none;
+}
+
+.letter-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(.35,1.1,.6,1.0);
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 24px -4px #1e293b80, 0 2px 4px #0ea5e980;
+  border-radius: 14px;
+  cursor: pointer;
+  background: rgba(2,2,16,0.30);
+}
+
+.letter-box:hover .letter-box-inner,
+.letter-box:focus .letter-box-inner {
+  transform: rotateY(180deg);
+}
+
+.letter-front, .letter-back {
+  position: absolute;
+  width: 100%; height: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  backface-visibility: hidden;
+  letter-spacing: 4px;
+  transition: box-shadow 0.2s;
+}
+
+.letter-front {
+  background: linear-gradient(135deg,#2563eb 60%,#397ffc 100%);
+  color: #ecfeff;
+  box-shadow: 0 5px 14px #06b6d480;
+}
+
+.letter-back {
+  background: linear-gradient(135deg,#18181b 70%,#6366f1 100%);
+  color: #f2eaff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem;
+  box-shadow: 0 4px 12px #a21caf80;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.letter-back span {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.letter-box:hover .letter-box-inner,
+.letter-box:focus .letter-box-inner {
+  box-shadow: 0 16px 38px -8px #1e293b,0 6px 12px #0ea5e9cd;
+}
+
+@media (max-width: 900px) {
+  .mirexon-letters {
+    gap: 1rem;
+  }
+  .letter-box {
+    width: 85px;
+    height: 110px;
+  }
+  .letter-front, .letter-back {
+    font-size: 1.6rem;
+  }
+}

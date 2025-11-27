@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIREXON™ | Mystery, Intellect, Revelation, Existence, Xeno, Origin, Neural</title>
+  <meta name="description" content="Inovatívna AI platforma pre komplexné riešenia budúcnosti.">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    html, body {
+      min-height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    body {
+      background: linear-gradient(-60deg,#4431a1 0%, #44d9ff 40%, #ffffff 90%, #b88aff 100%);
+      background-size: 300% 300%;
+      animation: animatedBG 17s ease infinite;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    }
+    @keyframes animatedBG {
+      0% {background-position:0% 80%;}
+      50% {background-position:100% 20%;}
+      100% {background-position:0% 80%;}
+    }
+    /* Futuristic glowing shapes for extra animation */
+    .background-glow {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 0; pointer-events: none;
+      overflow:hidden;
+    }
+    .glow-el {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(45px);
+      opacity: 0.25;
+      animation: floatGlow 12s infinite alternate ease-in-out;
+    }
+    .glow1 {background: #9360f7;width:320px;height:320px;top: 8%; left: 6%; animation-delay: 0s;}
+    .glow2 {background: #26fada;width:180px;height:180px;top: 70%; left: 79%; animation-delay: 4s;}
+    .glow3 {background: #ffed6b;width:220px;height:220px;top: 62%; left: 14%; animation-delay: 3s;}
+    .glow4 {background: #f34ac3;width:170px;height:170px;top: 40%; left: 75%; animation-delay: 8s;}
+    .glow5 {background: #38bdf8;width:120px;height:120px;top: 25%; left: 45%; animation-delay: 6s;}
+    @keyframes floatGlow {
+      to {transform: translateY(40px) scale(1.18);}
+      from {transform: translateY(-40px) scale(.92);}
+    }
+    .navbar-futuristic {
+      background: linear-gradient(90deg,#1e213a 30%, #3b82f6 90%);
+      box-shadow: 0 4px 22px 0 #168aaf70, 0 1px 1px #552ed599;
+      border-bottom: 2px solid #38bdf8cc;
+    }
+    .navbar-futuristic .navbar-brand {
+      font-weight: 800;
+      letter-spacing: 4px;
+      font-size: 2em;
+      text-shadow: 0 0 8px #38bdf8cc, 0 2px 10px #fff2;
+      color: #fff !important;
+      font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+      display: flex; align-items: center;
+      gap:9px;
+    }
+    .navbar-futuristic .navbar-brand i {
+      font-size:1.4em;
+      color:#38bdf8;
+      text-shadow: 0 0 18px #b88affaa;
+    }
+    .navbar-futuristic .nav-link {
+      color: #e0f9ff !important;
+      font-weight: 600;
+      font-size: 1.19em;
+      letter-spacing: 2px;
+      transition: all 0.19s cubic-bezier(.41,1.5,.53,.92);
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-futuristic .nav-link:hover,
+    .navbar-futuristic .nav-link.active {
+      color: #38bdf8 !important;
+      text-shadow: 0 0 9px #38bdf8aa;
+    }
+    .navbar-futuristic .btn {
+      font-weight: 700;
+      font-size: 1.14em;
+      border-radius: 20px;
+      padding: 0.35em 1.8em;
+      margin-left:12px;
+      box-shadow: 0 0 14px #38bdf8cc,0 1px 1px #552ed566;
+      background: linear-gradient(90deg,#3b82f6 30%, #38bdf8 100%);
+      color: #fff !important;
+      border: none;
+      transition:background 0.2s,box-shadow 0.25s,transform 0.17s;
+    }
+    .navbar-futuristic .btn:hover {
+      background: linear-gradient(90deg,#25c2fa 50%, #52a8e9 100%);
+      box-shadow:0 0 30px #38bdf8bb;
+      transform:scale(1.09);
+      color:#fff !important;
+    }
+    .navbar-futuristic .btn-outline-light {
+      background: transparent;
+      color: #38bdf8 !important;
+      border:2px solid #38bdf8aa;
+      box-shadow: 0 0 6px #38bdf8cc;
+    }
+    .navbar-futuristic .btn-outline-light:hover {
+      background: #38bdf8;
+      color: #fff !important;
+      box-shadow:0 0 22px #38bdf8cc;
+    }
+    .navbar-futuristic .navbar-toggler {
+      border:none;
+      background: transparent;
+    }
+    .navbar-futuristic .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(59,191,246,0.97)' stroke-width='2.2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    /* Header styles */
+    .futuristic-title {
+      color:#fff;
+      font-weight:900;
+      font-size: 3.1rem;
+      text-align:center;
+      letter-spacing: 0.09em;
+      text-shadow: 0 0 22px #38bdf8cf, 0 4px 32px #312e81d1;
+      margin-bottom: .3em;
+      margin-top: .9em;
+      font-family: 'Orbitron','Montserrat','Segoe UI',Arial,sans-serif;
+      z-index:9;
+      position:relative;
+    }
+    .futuristic-subtitle {
+      color: #44d9ff;
+      text-align: center;
+      font-size: 1.24rem;
+      font-family: 'Montserrat','Segoe UI',Arial,sans-serif;
+      text-shadow: 0 0 12px #38bdf8a9, 0 2px 14px #6366f199;
+      margin-bottom: 2em;
+      letter-spacing: 0.07em;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap: 9px;
+      z-index:9;
+      position:relative;
+    }
+    .futuristic-subtitle span {
+      background: linear-gradient(90deg,#dedafc 0%,#38bdf8 140%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      padding: 2px 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 18px #38bdf8cc;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.2s;
+      border: 1.5px solid #44d9ff44;
+    }
+    .futuristic-subtitle .fa {
+      color:#38bdf8;text-shadow:0 0 10px #38bdf8a1;font-size:1.1em;
+    }
+    .mirexon-letters .flip-card {
+      /* Futuristicky vylepšené, bude animované pri scroll */
+      transition: transform .4s cubic-bezier(.55,1.61,.53,.92), box-shadow .2s;
+      will-change: transform;
+    }
+    /* Scroll animation (scale/shadow) */
+    .flip-card.scaled {
+      transform: scale(1.22) rotateZ(-3deg) !important;
+      box-shadow:0 10px 40px 7px #38bdf888, 0 0 100px #44d9ff66;
+    }
+    @media (max-width:550px){
+      .futuristic-title {font-size:2.1rem;}
+      .futuristic-subtitle {font-size:1em;gap:4px;}
+      .futuristic-subtitle span {padding:2px 6px;font-size:0.94em;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Colorful Moving Glow Background Elements -->
+  <div class="background-glow">
+    <div class="glow-el glow1"></div>
+    <div class="glow-el glow2"></div>
+    <div class="glow-el glow3"></div>
+    <div class="glow-el glow4"></div>
+    <div class="glow-el glow5"></div>
+  </div>
+
+  <!-- Futuristic Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-atom"></i>MIREXON</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic" aria-controls="navbarFuturistic" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarFuturistic">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Domov</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#funkcie">Funkcie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#buducnost">Budúcnosť</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 gap-2">
+          <a href="javascript:;" class="btn btn-outline-light">Sign in</a>
+          <a href="javascript:;" class="btn">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="futuristic-title">MIREXON<sup style="font-size:1rem;color:#38bdf8;">™</sup></h1>
+    <div class="futuristic-subtitle mb-5">
+      <span><i class="fa-solid fa-mask"></i>Mystery</span>
+      <span><i class="fa-solid fa-brain"></i>Intellect</span>
+      <span><i class="fa-solid fa-key"></i>Revelation</span>
+      <span><i class="fa-solid fa-landmark"></i>Existence</span>
+      <span><i class="fa-solid fa-rocket"></i>Xeno</span>
+      <span><i class="fa-solid fa-seedling"></i>Origin</span>
+      <span><i class="fa-solid fa-network-wired"></i>Neural</span>
+    </div>
+
+    <!-- MIREXON letters flip cards + scroll animated -->
+    <div class="mirexon-letters mb-5">
+      <div class="flip-card" tabindex="0" aria-label="Mystery">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">M</div>
+          <div class="flip-card-back shadow">Mystery<span>Tajomstvo, objavovanie neznámeho.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Intellect">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">I</div>
+          <div class="flip-card-back shadow">Intellect<span>Rozum, pokročilé myslenie.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Revelation">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">R</div>
+          <div class="flip-card-back shadow">Revelation<span>Objavovanie nových perspektív.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Existence">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">E</div>
+          <div class="flip-card-back shadow">Existence<span>Bytie, nové formy existencie.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Xeno">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">X</div>
+          <div class="flip-card-back shadow">Xeno<span>Prienik mimo známeho, neznáme svety.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Origin">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">O</div>
+          <div class="flip-card-back shadow">Origin<span>Pôvod, inovácie, začiatky.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Neural">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">N</div>
+          <div class="flip-card-back shadow">Neural<span>Prepojenie inteligencie, neurálne siete.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="funkcie" class="mb-4 bg-dark bg-opacity-75 p-4 rounded-4 shadow text-light">
+      <h2 class="fs-3 fw-semibold mb-3">🚀 Ciele MIREXON™</h2>
+      <ul class="mb-0">
+        <li><b>AI Platforma:</b> Nástroje poháňané umelou inteligenciou pre tvorbu pokročilého obsahu a rozvoj nových technológií.</li>
+        <li><b>Transformácia budúcnosti:</b> Neurovzdielané systémy pre riešenie problémov spoločnosti a priemyslu.</li>
+        <li><b>Komunitný prístup:</b> Komunity zamerané na inovatívne osoby a transformáciu sveta.</li>
+        <li><b>Technologické riešenia:</b> Široká škála nástrojov, od generovania obsahu po analytické nástroje.</li>
+      </ul>
+    </section>
+    <section id="buducnost" class="mb-4 bg-dark bg-opacity-75 p-4 rounded-4 shadow text-light">
+      <h2 class="fs-3 fw-semibold mb-3">🧠 Hlavné funkcie</h2>
+      <ul>
+        <li><strong>GENIMIND™</strong> – AI tvorba obsahu na základe vstupných údajov.</li>
+        <li><strong>LOGIX AI</strong> – Analytické nástroje a predikcia trendov.</li>
+        <li><strong>VISIONARY</strong> – Počítačové videnie a rozpoznávanie objektov.</li>
+        <li><strong>NEURALINKER</strong> – Prepojenie AI nástrojov do jednej siete.</li>
+      </ul>
+    </section>
+    <section class="mb-4 bg-dark bg-opacity-75 p-4 rounded-4 shadow text-light">
+      <h2 class="fs-3 fw-semibold mb-3">💡 Budúcnosť MIREXON™</h2>
+      <ul>
+        <li><b>Space Expansion:</b> Systém pre vesmírny prieskum a využitie AI v neznámom prostredí.</li>
+        <li><b>AI for the Future:</b> Vývoj neuroinšpirovaných modelov na zlepšenie efektivity a kvality života.</li>
+      </ul>
+    </section>
+    <section class="mb-4 bg-dark bg-opacity-75 p-4 rounded-4 shadow text-light">
+      <h2 class="fs-3 fw-semibold mb-3">🔐 Zabezpečenie a ochrana údajov</h2>
+      <p>
+        MIREXON™ používa najmodernejšie bezpečnostné protokoly na ochranu údajov používateľov a funguje v rámci etických hraníc.
+      </p>
+    </section>
+    <section id="kontakt" class="mb-4 bg-dark bg-opacity-75 p-4 rounded-4 shadow text-light">
+      <h2 class="fs-3 fw-semibold mb-3">⚙️ Použité technológie</h2>
+      <ul>
+        <li><b>Next.js:</b> Rýchle webové aplikácie s SSR.</li>
+        <li><b>MongoDB:</b> Databáza pre používateľské údaje a kredity.</li>
+        <li><b>OpenAI:</b> AI modely a nástroje.</li>
+        <li><b>Bootstrap:</b> Flexibilný dizajn aplikácie.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
