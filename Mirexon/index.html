@@ -4,21 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MIREXON™ | Mystery, Intellect, Revelation, Existence, Xeno, Origin, Neural</title>
+  <title>MIREXON™</title>
   <meta name="description" content="Inovatívna AI platforma pre komplexné riešenia budúcnosti.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="css/style.css" rel="stylesheet">
+  
 </head>
 
 <body>
-  <div class="background-glow">
-    <div class="glow-el glow1"></div>
-    <div class="glow-el glow2"></div>
-    <div class="glow-el glow3"></div>
-    <div class="glow-el glow4"></div>
-    <div class="glow-el glow5"></div>
-  </div>
+  <canvas id="neural-canvas"></canvas>
 
   <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
     <div class="container-fluid">
@@ -43,8 +38,7 @@
           </li>
         </ul>
         <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 gap-2">
-          <a href="javascript:;" class="btn btn-outline-light">Sign in</a>
-          <a href="javascript:;" class="btn">Sign up</a>
+          <a href="login.html" class="btn">Sign in</a>
         </div>
       </div>
     </div>
@@ -98,7 +92,6 @@
       </div>
     </div>
 
-    <!-- CIELE: Moderné kartičky s ikonou -->
     <section id="funkcie" class="mb-5">
       <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🚀</span>Ciele MIREXON™</h2>
       <div class="row gy-4 justify-content-center">
@@ -107,7 +100,8 @@
             <div class="card-body text-center">
               <div class="card-icon text-info"><i class="fa-solid fa-brain"></i></div>
               <h5 class="fw-semibold mb-2">AI Platforma</h5>
-              <p class="mb-0 small">Nástroje poháňané umelou inteligenciou pre tvorbu pokročilého obsahu a rozvoj nových technológií.</p>
+              <p class="mb-0 small">Nástroje poháňané umelou inteligenciou pre tvorbu pokročilého obsahu a rozvoj nových
+                technológií.</p>
             </div>
           </div>
         </div>
@@ -141,7 +135,6 @@
       </div>
     </section>
 
-    <!-- HLAVNÉ FUNKCIE: Horizontálna "timeline" s avatarmi/ikonami -->
     <section id="buducnost" class="mb-5">
       <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧠</span>Hlavné funkcie</h2>
       <div class="row justify-content-center gy-4 gx-3 futuristic-feature-row">
@@ -176,7 +169,6 @@
       </div>
     </section>
 
-    <!-- BUDÚCNOSŤ: Progresbary (symbolizujú progress, rast, ciele) -->
     <section class="mb-5">
       <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">💡</span>Budúcnosť MIREXON™</h2>
       <div class="row justify-content-center gy-4">
@@ -202,7 +194,6 @@
       </div>
     </section>
 
-    <!-- ZABEZPEČENIE: Moderný "callout" box s ikonou -->
     <section class="mb-5">
       <div class="rounded-4 bg-dark bg-opacity-80 p-4 shadow-lg d-flex align-items-center gap-3">
         <div class="display-4 text-warning"><i class="fa-solid fa-shield-halved"></i></div>
@@ -214,7 +205,6 @@
       </div>
     </section>
 
-    <!-- TECHNOLÓGIE: Grid s ikonami a badge -->
     <section id="kontakt" class="mb-4">
       <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">⚙️</span>Použité technológie</h2>
       <div class="row justify-content-center gy-4">
@@ -234,7 +224,7 @@
         </div>
         <div class="col-sm-6 col-lg-3">
           <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
-            <div class="mb-2 fs-2 text-info"><i class="fa-brands fa-openai"></i></div>
+            <div class="mb-2 fs-2 text-info"><i class="fas fa-brain" style="color: #74C0FC" ;></i></div>
             <span class="badge bg-info mb-2">OpenAI</span>
             <div class="small text-light">AI modely a nástroje.</div>
           </div>
@@ -251,5 +241,112 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
+<script>
+    // 🎨 NEURAL BACKGROUND (React → Vanilla JS)
+    const canvas = document.getElementById('neural-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    
+    // Resize handler
+    const resizeCanvas = () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    };
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Mouse tracking
+    const mouse = { x: null, y: null };
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+    
+    // Nodes array
+    const nodes = [];
+    const nodeCount = 450;
+    
+    // Initialize nodes
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5
+      });
+    }
+    
+    // Animation loop
+    const animate = () => {
+      // Trail efekt namiesto clearRect
+      ctx.fillStyle = 'rgba(14, 14, 14, 0.1)';
+      ctx.fillRect(0, 0, width, height);
+      
+      // Update & draw nodes
+      for (let i = 0; i < nodeCount; i++) {
+        const n = nodes[i];
+        
+        // Update position
+        n.x += n.vx;
+        n.y += n.vy;
+        
+        // Bounce off edges
+        if (n.x < 0 || n.x > width) n.vx *= -1;
+        if (n.y < 0 || n.y > height) n.vy *= -1;
+        
+        // Draw node
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#00ffaa';
+        ctx.shadowColor = '#00ffaa';
+        ctx.shadowBlur = 10;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+      
+      // Connections between nodes
+      for (let i = 0; i < nodeCount; i++) {
+        for (let j = i + 1; j < nodeCount; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 255, 170, ${1 - dist / 120})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      // Mouse connections (MAGNETIC EFFECT)
+      if (mouse.x && mouse.y) {
+        for (let i = 0; i < nodeCount; i++) {
+          const dx = nodes[i].x - mouse.x;
+          const dy = nodes[i].y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(255, 0, 180, ${1 - dist / 150})`;
+            ctx.lineWidth = 1.5;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      requestAnimationFrame(animate);
+    };
+    
+    // Start animation
+    animate();
+    
+    console.log('🧠 Neural Background aktivovaný! (Scroll OK)');
+  </script>
 </html>
