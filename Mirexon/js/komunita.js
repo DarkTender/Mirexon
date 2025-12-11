@@ -1,137 +1,224 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('neural-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+// ====== Jednoduchý front-end CHAT (lokálne, bez backendu) ======
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const chatWindow = document.getElementById("chatWindow");
 
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+chatForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = chatInput.value.trim();
+  if (!text) return;
+  const bubble = document.createElement("div");
+  bubble.className = "chat-bubble chat-me";
+  bubble.innerHTML = text;
+  chatWindow.firstElementChild.appendChild(bubble);
+  chatInput.value = "";
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+});
 
-  const resizeCanvas = () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+// ====== Jednoduché KOMENTÁRE (len v pamäti pre túto stránku) ======
+const commentForm = document.getElementById("commentForm");
+const commentInput = document.getElementById("commentInput");
+const commentsList = document.getElementById("commentsList");
+
+commentForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = commentInput.value.trim();
+  if (!text) return;
+  const wrapper = document.createElement("div");
+  wrapper.className = "mb-2 border-bottom border-secondary pb-2 small";
+  wrapper.innerHTML = "<strong>Anon</strong><br>" + text;
+  commentsList.appendChild(wrapper);
+  commentInput.value = "";
+});
+
+// ====== Jednoduchý SNAKE (Hadík) – inšpirácia JS canvas hrami [web:44][web:48] ======
+const canvasGame = document.getElementById("snakeCanvas");
+const ctxG = canvasGame.getContext("2d");
+const gridSize = 16;
+let snake,
+  food,
+  dx,
+  dy,
+  score,
+  gameInterval,
+  running = false;
+
+function resetGame() {
+  snake = [{ x: 8, y: 8 }];
+  dx = 1;
+  dy = 0;
+  score = 0;
+  document.getElementById("score").textContent = score;
+  placeFood();
+}
+
+function placeFood() {
+  food = {
+    x: Math.floor(Math.random() * (canvasGame.width / gridSize)),
+    y: Math.floor(Math.random() * (canvasGame.height / gridSize)),
   };
-  window.addEventListener('resize', resizeCanvas);
+}
 
-  const bgColor = 'rgba(15, 23, 42, 0.96)'; // tmavé pozadie
-  const bubbleColors = [
-    'rgba(56,189,248,0.5)',   // modrá
-    'rgba(34,197,94,0.5)',    // zelená
-    'rgba(250,204,21,0.5)',   // žltá
-    'rgba(236,72,153,0.45)'   // ružová
-  ];
+function drawGame() {
+  ctxG.fillStyle = "#020617";
+  ctxG.fillRect(0, 0, canvasGame.width, canvasGame.height);
 
-  const bubbles = [];
-  const bubbleCount = 25;
+  // food
+  ctxG.fillStyle = "#22c55e";
+  ctxG.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
 
-  for (let i = 0; i < bubbleCount; i++) {
-    bubbles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      r: 50 + Math.random() * 80,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      colorIndex: Math.floor(Math.random() * bubbleColors.length),
-      wobblePhase: Math.random() * Math.PI * 2,
-      wobbleSpeed: 0.002 + Math.random() * 0.003
-    });
+  // snake
+  ctxG.fillStyle = "#38bdf8";
+  snake.forEach((seg) => {
+    ctxG.fillRect(
+      seg.x * gridSize,
+      seg.y * gridSize,
+      gridSize - 1,
+      gridSize - 1
+    );
+  });
+}
+
+function updateGame() {
+  const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+  // wrap-around okraje
+  const cols = canvasGame.width / gridSize;
+  const rows = canvasGame.height / gridSize;
+  if (head.x < 0) head.x = cols - 1;
+  if (head.x >= cols) head.x = 0;
+  if (head.y < 0) head.y = rows - 1;
+  if (head.y >= rows) head.y = 0;
+
+  // kolízia s telom
+  if (snake.some((seg) => seg.x === head.x && seg.y === head.y)) {
+    alert("Game Over! Skóre: " + score);
+    running = false;
+    clearInterval(gameInterval);
+    return;
   }
 
-  const mouse = { x: null, y: null };
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+  snake.unshift(head);
+
+  // jedlo
+  if (head.x === food.x && head.y === food.y) {
+    score++;
+    document.getElementById("score").textContent = score;
+    placeFood();
+  } else {
+    snake.pop();
+  }
+
+  drawGame();
+}
+
+document.getElementById("startGameBtn").addEventListener("click", () => {
+  resetGame();
+  drawGame();
+  if (running) clearInterval(gameInterval);
+  running = true;
+  gameInterval = setInterval(updateGame, 120);
+});
+
+window.addEventListener("keydown", (e) => {
+  if (!running) return;
+  if (e.key === "ArrowUp" && dy !== 1) {
+    dx = 0;
+    dy = -1;
+  }
+  if (e.key === "ArrowDown" && dy !== -1) {
+    dx = 0;
+    dy = 1;
+  }
+  if (e.key === "ArrowLeft" && dx !== 1) {
+    dx = -1;
+    dy = 0;
+  }
+  if (e.key === "ArrowRight" && dx !== -1) {
+    dx = 1;
+    dy = 0;
+  }
+});
+
+// ====== Neural canvas pozadie – môžeš skopírovať z indexu ======
+const canvasBg = document.getElementById("neural-canvas");
+const ctx = canvasBg.getContext("2d");
+let w = (canvasBg.width = window.innerWidth);
+let h = (canvasBg.height = window.innerHeight);
+
+const resizeCanvas = () => {
+  w = canvasBg.width = window.innerWidth;
+  h = canvasBg.height = window.innerHeight;
+};
+window.addEventListener("resize", resizeCanvas);
+
+const mouse = { x: null, y: null };
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
+
+const nodes = [];
+const nodeCount = 380;
+for (let i = 0; i < nodeCount; i++) {
+  nodes.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    vx: (Math.random() - 0.5) * 1.5,
+    vy: (Math.random() - 0.5) * 1.5,
+  });
+}
+
+function animate() {
+  ctx.fillStyle = "rgba(14,14,14,0.12)";
+  ctx.fillRect(0, 0, w, h);
+
+  nodes.forEach((n) => {
+    n.x += n.vx;
+    n.y += n.vy;
+    if (n.x < 0 || n.x > w) n.vx *= -1;
+    if (n.y < 0 || n.y > h) n.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = "#22c55e";
+    ctx.shadowColor = "#22c55e";
+    ctx.shadowBlur = 10;
+    ctx.fill();
+    ctx.shadowBlur = 0;
   });
 
-  function drawBubbles(time) {
-    for (const b of bubbles) {
-      // pohyb
-      b.x += b.vx;
-      b.y += b.vy;
-
-      if (b.x < -b.r) b.x = width + b.r;
-      if (b.x > width + b.r) b.x = -b.r;
-      if (b.y < -b.r) b.y = height + b.r;
-      if (b.y > height + b.r) b.y = -b.r;
-
-      // wobble – dýchanie bublín
-      const wobble = Math.sin(time * b.wobbleSpeed + b.wobblePhase) * 10;
-
-      // interakcia s myšou – jemný „odtlak“
-      if (mouse.x !== null && mouse.y !== null) {
-        const dx = b.x - mouse.x;
-        const dy = b.y - mouse.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const influenceRadius = 200;
-        if (dist < influenceRadius && dist > 0) {
-          const force = (1 - dist / influenceRadius) * 0.6;
-          b.x += (dx / dist) * force * 4;
-          b.y += (dy / dist) * force * 4;
-        }
-      }
-
-      const gradient = ctx.createRadialGradient(
-        b.x - b.r * 0.2, b.y - b.r * 0.2, b.r * 0.1,
-        b.x, b.y, b.r + wobble
-      );
-      gradient.addColorStop(0, 'rgba(248,250,252,0.65)');
-      gradient.addColorStop(0.4, bubbleColors[b.colorIndex]);
-      gradient.addColorStop(1, 'rgba(15,23,42,0)');
-
-      ctx.fillStyle = gradient;
-      ctx.beginPath();
-      ctx.arc(b.x, b.y, b.r + wobble, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function drawConnections() {
-    ctx.lineWidth = 1;
-    for (let i = 0; i < bubbles.length; i++) {
-      for (let j = i + 1; j < bubbles.length; j++) {
-        const a = bubbles[i];
-        const b = bubbles[j];
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = 260;
-        if (dist < maxDist) {
-          const alpha = 1 - dist / maxDist;
-          ctx.strokeStyle = `rgba(148,163,184,${alpha * 0.5})`;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
+  for (let i = 0; i < nodeCount; i++) {
+    for (let j = i + 1; j < nodeCount; j++) {
+      const dx = nodes[i].x - nodes[j].x;
+      const dy = nodes[i].y - nodes[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 110) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(34,197,94,${1 - dist / 110})`;
+        ctx.lineWidth = 1;
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.stroke();
       }
     }
   }
 
-  function drawMouseHighlight() {
-    if (mouse.x === null || mouse.y === null) return;
-
-    const gradient = ctx.createRadialGradient(
-      mouse.x, mouse.y, 0,
-      mouse.x, mouse.y, 160
-    );
-    gradient.addColorStop(0, 'rgba(244,244,245,0.25)');
-    gradient.addColorStop(1, 'rgba(15,23,42,0)');
-
-    ctx.fillStyle = gradient;
-    ctx.beginPath();
-    ctx.arc(mouse.x, mouse.y, 160, 0, Math.PI * 2);
-    ctx.fill();
+  if (mouse.x && mouse.y) {
+    nodes.forEach((n) => {
+      const dx = n.x - mouse.x;
+      const dy = n.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 150) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(56,189,248,${1 - dist / 150})`;
+        ctx.lineWidth = 1.4;
+        ctx.moveTo(n.x, n.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+      }
+    });
   }
-
-  function animate(time) {
-    ctx.fillStyle = bgColor;
-    ctx.fillRect(0, 0, width, height);
-
-    drawBubbles(time);
-    drawConnections();
-    drawMouseHighlight();
-
-    requestAnimationFrame(animate);
-  }
-
-  animate(0);
-});
+  requestAnimationFrame(animate);
+}
+animate();
