@@ -25,9 +25,11 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
           <li class="nav-item"><a class="nav-link active" href="ai_platforma.html">Writeups</a></li>
+          <li class="nav-item"><a class="nav-link" href="transformacia.html">Roadmap</a></li>
           <li class="nav-item"><a class="nav-link" href="techno_riesenia.html">Tools</a></li>
           <li class="nav-item"><a class="nav-link" href="komunita.html">Komunita</a></li>
         </ul>
+
         <div class="d-flex ms-lg-3 mt-3 mt-lg-0 gap-2">
           <a href="login.html" class="btn">Login</a>
         </div>
@@ -94,78 +96,15 @@
       </p>
     </section>
 
-    <section class="mb-5">
-      <h2 class="fs-2 fw-bold text-center mb-5 text-light">
-        <span class="me-2">🧩</span>Ako budú fungovať články (CRUD)
-      </h2>
-
-      <div class="row gy-4">
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-50 border border-info">
-            <div class="fs-1 text-info mb-3"><i class="fa-solid fa-pen-to-square"></i></div>
-            <h5 class="fw-bold mb-3">Create</h5>
-            <p class="text-light-emphasis speed-text">
-              Pridám nový writeup (title, obsah, tagy, dátum).
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-50 border border-primary">
-            <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-book-open-reader"></i></div>
-            <h5 class="fw-bold mb-3">Read</h5>
-            <p class="text-light-emphasis">Zoznam článkov + detail + vyhľadávanie.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-50 border border-success">
-            <div class="fs-1 text-success mb-3"><i class="fa-solid fa-eraser"></i></div>
-            <h5 class="fw-bold mb-3">Update / Delete</h5>
-            <p class="text-light-emphasis">Edit a mazanie iba po prihlásení (login + sessions).</p>
-          </div>
-        </div>
+    <section class="text-center py-5 rounded-5 bg-gradient bg-info bg-opacity-20 border border-info mb-5">
+      <div class="display-5 fw-bold text-info mb-4">
+        <i class="fa-solid fa-route me-3"></i>
+        Roadmap projektu
       </div>
-    </section>
-
-    <section class="mb-5" id="kategorie">
-      <h2 class="fs-2 fw-bold text-center mb-5 text-light">
-        <span class="me-2">🏷️</span>Kategórie (príklady)
-      </h2>
-
-      <div class="row justify-content-center gy-4 futuristic-feature-row">
-        <div class="col-lg-3 col-md-6">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-info"><i class="fa-solid fa-globe"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Web Security</div>
-            <div class="feature-desc small text-light opacity-85">OWASP témy, bezpečné praktiky, lab testy.</div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-primary"><i class="fa-solid fa-network-wired"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Networking</div>
-            <div class="feature-desc small text-light opacity-85">PCAP, protokoly, scanning, segmentácia.</div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-warning"><i class="fa-solid fa-eye"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Detection</div>
-            <div class="feature-desc small text-light opacity-85">Logy, alerty, triage, korelácie.</div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-success"><i class="fa-solid fa-lock"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Hardening</div>
-            <div class="feature-desc small text-light opacity-85">Linux, služby, konfigurácie, baseline.</div>
-          </div>
-        </div>
-      </div>
+      <p class="fs-4 text-light mb-4">Pozri, ako z toho spravíš OOP PHP + MySQL projekt s CRUD.</p>
+      <a href="transformacia.html" class="btn btn-lg btn-info btn-glow px-5 py-3 fs-5 fw-bold">
+        <i class="fa-solid fa-arrow-right me-2"></i>Otvoriť Roadmap
+      </a>
     </section>
 
     <section class="text-center py-5 rounded-5 bg-gradient bg-info bg-opacity-20 border border-info mb-5">
@@ -177,21 +116,6 @@
       <a href="login.html" class="btn btn-lg btn-info btn-glow px-5 py-3 fs-5 fw-bold">
         <i class="fa-solid fa-play me-2"></i>Prejsť na login
       </a>
-    </section>
-
-    <section id="kontakt" class="text-center">
-      <h2 class="fs-2 fw-bold mb-4 text-light">Kontakt / Info</h2>
-      <p class="lead text-light-emphasis mb-4">
-        Všetko je určené na učenie a dokumentáciu. Žiadne neautorizované testovanie.
-      </p>
-      <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-        <a href="index.html" class="btn btn-outline-light btn-lg">
-          <i class="fa-solid fa-house me-2"></i>Späť na domov
-        </a>
-        <a href="komunita.html" class="btn btn-light btn-lg">
-          <i class="fa-solid fa-users me-2"></i>Komunita
-        </a>
-      </div>
     </section>
   </main>
 
