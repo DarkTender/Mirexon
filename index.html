@@ -2,14 +2,16 @@
 <html lang="sk">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SENTRIX™ | Cyber Security Lab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SENTRIX™ | Cyber Learning Hub</title>
   <meta name="description"
-    content="SENTRIX™ — Cyber Security Lab & Writeups. Praktické poznámky, homelab, nástroje a bezpečnostné experimenty v legálnom prostredí.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link href="css/style.css" rel="stylesheet">
+    content="SENTRIX™ – cyber learning hub: writeups, laby, tools a komunita. Linux, Raspberry Pi, wireless, CTF a etické testovanie." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,6 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><i class="fa-solid fa-shield-halved"></i>SENTRIX</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic"
         aria-controls="navbarFuturistic" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,192 +35,320 @@
           <li class="nav-item"><a class="nav-link" href="community.html">Komunita</a></li>
         </ul>
 
-        <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 gap-2">
+        <div class="d-flex ms-lg-3 mt-3 mt-lg-0 gap-2">
           <a href="login.html" class="btn">Login</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1 class="futuristic-title">SENTRIX<sup style="font-size:1rem;color:#38bdf8;">™</sup></h1>
+  <main class="container py-5" id="home">
+    <!-- HERO -->
+    <section class="ix-hero ix-surface rounded-5 p-4 p-lg-5 mb-5 shadow-lg">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-7">
+          <div class="ix-kicker mb-3">
+            <span class="ix-pill"><i class="fa-solid fa-compass me-2"></i>Cyber Learning Hub</span>
+            <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-terminal me-2"></i>Linux</span>
+            <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-wifi me-2"></i>Wireless</span>
+            <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-microchip me-2"></i>Raspberry Pi</span>
+          </div>
 
-    <p class="futuristic-subtitle">
-      <span><i class="fa-solid fa-network-wired"></i>Network</span>
-      <span><i class="fa-solid fa-bug"></i>Web Security</span>
-      <span><i class="fa-solid fa-eye"></i>Monitoring</span>
-      <span><i class="fa-solid fa-book"></i>Writeups</span>
-    </p>
+          <h1 class="display-4 fw-bold text-light mb-3">
+            SENTRIX™
+          </h1>
 
-    <div class="mirexon-letters mb-5">
-      <div class="flip-card" tabindex="0" aria-label="Security">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">S</div>
-          <div class="flip-card-back shadow">Security<span>Bezpečnostné princípy, obrana a testovanie v lab-e.</span></div>
+          <p class="lead fs-4 text-light-emphasis mb-4">
+            Miesto, kde si budujem skillset a zdieľam poznámky: writeups, laby, nástroje a komunita
+            zameraná na praktickú cyber bezpečnosť.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-lg btn-primary px-4 py-3 fw-bold ix-btn-glow" href="writeups.html">
+              <i class="fa-solid fa-book-skull me-2"></i>Začať s writeups
+            </a>
+            <a class="btn btn-lg btn-outline-light px-4 py-3 fw-bold" href="roadmap.html">
+              <i class="fa-solid fa-route me-2"></i>Pozrieť roadmap
+            </a>
+            <a class="btn btn-lg btn-outline-info px-4 py-3 fw-bold" href="tools.html">
+              <i class="fa-solid fa-screwdriver-wrench me-2"></i>Tools
+            </a>
+          </div>
+
+          <p class="small text-secondary mt-3 mb-0">
+            <i class="fa-solid fa-shield me-2"></i>
+            Všetko iba v autorizovaných prostrediach (homelab / CTF / platformy).
+          </p>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="ix-terminal rounded-4 p-4">
+            <div class="ix-terminal-top d-flex align-items-center justify-content-between mb-3">
+              <div class="text-light fw-bold">
+                <i class="fa-solid fa-terminal me-2 text-info"></i>Linux workflow (preview)
+              </div>
+              <span class="ix-pill ix-pill-muted">labs</span>
+            </div>
+
+            <pre class="ix-code mb-0"><code># warmup
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+# recon basics (authorized only)
+ip a
+ip r
+ss -tulpn
+nmap -sV -sC target.local
+
+# wireless notes (lab)
+sudo airmon-ng start wlan0
+sudo airodump-ng wlan0mon
+</code></pre>
+          </div>
         </div>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="Event">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">E</div>
-          <div class="flip-card-back shadow">Event<span>Udalosti, logy a signály z infraštruktúry.</span></div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="mb-5">
+      <div class="d-flex align-items-end justify-content-between gap-3 mb-3">
+        <div>
+          <h2 class="ix-title text-light mb-1">
+            <i class="fa-solid fa-layer-group text-info me-2"></i>Tri piliere
+          </h2>
+          <p class="text-secondary mb-0">Aby to bolo pestré: učím sa, skúšam, zapisujem + zdieľam.</p>
         </div>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="Network">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">N</div>
-          <div class="flip-card-back shadow">Network<span>Packet analýza, segmentácia, DNS/HTTP/TLS.</span></div>
+
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <article class="ix-card ix-surface rounded-5 p-4 h-100">
+            <div class="ix-card-head">
+              <div class="ix-ico ix-ico-cyan"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Learn</h3>
+                <p class="text-light-emphasis small mb-0">Základy + nové techniky: Linux, web, sieť, wireless.</p>
+              </div>
+            </div>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="ix-tag">OverTheWire</span><span class="ix-tag">notes</span><span class="ix-tag">basics</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <article class="ix-card ix-surface rounded-5 p-4 h-100">
+            <div class="ix-card-head">
+              <div class="ix-ico ix-ico-purple"><i class="fa-solid fa-flask-vial"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Practice</h3>
+                <p class="text-light-emphasis small mb-0">CTF, HackTheBox a vlastné laby (Raspberry Pi).</p>
+              </div>
+            </div>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="ix-tag">CTF</span><span class="ix-tag">HTB</span><span class="ix-tag">homelab</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <article class="ix-card ix-surface rounded-5 p-4 h-100">
+            <div class="ix-card-head">
+              <div class="ix-ico ix-ico-green"><i class="fa-solid fa-file-pen"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Share</h3>
+                <p class="text-light-emphasis small mb-0">Writeups a nástroje — aby sa to dalo učiť aj ostatným.</p>
+              </div>
+            </div>
+            <div class="mt-3 d-flex flex-wrap gap-2">
+              <span class="ix-tag">writeups</span><span class="ix-tag">tools</span><span class="ix-tag">community</span>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="Threat">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">T</div>
-          <div class="flip-card-back shadow">Threat<span>Hrozby, útoky v kontrolovanom prostredí, TTPs.</span></div>
+    </section>
+
+    <!-- FEATURED SECTIONS -->
+    <section class="mb-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="ix-link-card ix-surface rounded-5 p-4 h-100 d-block text-decoration-none" href="writeups.html">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ix-ico ix-ico-cyan"><i class="fa-solid fa-book-skull"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Writeups</h3>
+                <p class="text-light-emphasis mb-0 small">
+                  Postupy, poznámky, riešenia a lessons learned z labov.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a class="ix-link-card ix-surface rounded-5 p-4 h-100 d-block text-decoration-none" href="tools.html">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ix-ico ix-ico-purple"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Tools</h3>
+                <p class="text-light-emphasis mb-0 small">
+                  Zoznam nástrojov + moje vlastné mini tooly (časom).
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a class="ix-link-card ix-surface rounded-5 p-4 h-100 d-block text-decoration-none" href="roadmap.html">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ix-ico ix-ico-green"><i class="fa-solid fa-route"></i></div>
+              <div>
+                <h3 class="h5 fw-bold text-light mb-1">Roadmap</h3>
+                <p class="text-light-emphasis mb-0 small">
+                  Čo sa učím teraz, čo bude ďalej a aké sú ciele.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="Response">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">R</div>
-          <div class="flip-card-back shadow">Response<span>Incident response, triage, postupy a playbooky.</span></div>
-        </div>
+    </section>
+
+    <!-- HERO (FUTURISTIC / EPIC) -->
+<section class="ix-hero ix-surface ix-hero-epic rounded-5 p-4 p-lg-5 mb-5 shadow-lg">
+  <div class="ix-hero-grid"></div>
+  <div class="ix-hero-scanlines"></div>
+
+  <div class="row gy-4 align-items-center position-relative">
+    <div class="col-lg-7">
+      <div class="ix-kicker mb-3">
+        <span class="ix-pill ix-pill-accent"><i class="fa-solid fa-compass me-2"></i>Cyber Learning Hub</span>
+        <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-terminal me-2"></i>Linux</span>
+        <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-wifi me-2"></i>Wireless</span>
+        <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-microchip me-2"></i>Raspberry Pi</span>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="Intelligence">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">I</div>
-          <div class="flip-card-back shadow">Intelligence<span>Threat intel, IOC, kontext a korelácie.</span></div>
-        </div>
+
+      <h1 class="display-3 fw-black text-light mb-2 ix-glitch" data-text="SENTRIX™">
+        SENTRIX™
+      </h1>
+
+      <p class="ix-subhero mb-4">
+        Futuristický learning hub pre hacking mindset:
+        <span class="ix-gradtext">writeups</span>, <span class="ix-gradtext">labs</span>, <span class="ix-gradtext">tools</span>
+        a komunita, ktorá rieši veci prakticky.
+      </p>
+
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-lg btn-primary px-4 py-3 fw-bold ix-btn-neon" href="writeups.html">
+          <i class="fa-solid fa-book-skull me-2"></i>Enter Writeups
+        </a>
+        <a class="btn btn-lg btn-outline-info px-4 py-3 fw-bold ix-btn-outline-neon" href="roadmap.html">
+          <i class="fa-solid fa-route me-2"></i>Roadmap
+        </a>
+        <a class="btn btn-lg btn-outline-light px-4 py-3 fw-bold ix-btn-outline-soft" href="tools.html">
+          <i class="fa-solid fa-screwdriver-wrench me-2"></i>Tools
+        </a>
       </div>
-      <div class="flip-card" tabindex="0" aria-label="X-Ops">
-        <div class="flip-card-inner">
-          <div class="flip-card-front shadow">X</div>
-          <div class="flip-card-back shadow">X‑Ops<span>Automatizácia, skripty, bezpečný ops mindset.</span></div>
+
+      <div class="ix-mission mt-4">
+        <div class="ix-mission-tile">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <div class="ix-mission-title">Mission</div>
+            <div class="ix-mission-desc">Learn → Practice → Document → Repeat</div>
+          </div>
+        </div>
+
+        <div class="ix-mission-tile">
+          <i class="fa-solid fa-lock"></i>
+          <div>
+            <div class="ix-mission-title">Rules</div>
+            <div class="ix-mission-desc">Authorized only • Ethics first</div>
+          </div>
+        </div>
+
+        <div class="ix-mission-tile">
+          <i class="fa-solid fa-signal"></i>
+          <div>
+            <div class="ix-mission-title">Signal</div>
+            <div class="ix-mission-desc">Linux • Wireless • CTF • Homelab</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <section id="sekcie" class="mb-5">
-      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧭</span>Rýchle odkazy</h2>
-      <div class="row gy-4 justify-content-center">
-        <div class="col-md-6 col-lg-3">
-          <a href="writeups.html" class="text-decoration-none text-light">
-            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
-              <div class="card-body text-center">
-                <div class="card-icon text-info"><i class="fa-solid fa-book-skull"></i></div>
-                <h5 class="fw-semibold mb-2">Writeups</h5>
-                <p class="mb-0 small">Poznámky z labu, OWASP témy, postupy, lessons learned.</p>
-              </div>
-            </div>
-          </a>
+    <div class="col-lg-5">
+      <div class="ix-terminal rounded-4 p-4 ix-terminal-epic">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div class="text-light fw-bold">
+            <i class="fa-solid fa-satellite-dish me-2 text-info"></i>Signal feed
+          </div>
+          <span class="ix-pill ix-pill-muted">live*</span>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <a href="roadmap.html" class="text-decoration-none text-light">
-            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
-              <div class="card-body text-center">
-                <div class="card-icon text-primary"><i class="fa-solid fa-route"></i></div>
-                <h5 class="fw-semibold mb-2">Roadmap</h5>
-                <p class="mb-0 small">Plán projektu: PHP 8 + MySQL, OOP, login, CRUD článkov.</p>
-              </div>
-            </div>
-          </a>
-        </div>
+        <pre class="ix-code mb-0"><code>[BOOT] sentrix.core :: online
+[FOCUS] linux / wireless / ctf / raspberry-pi
+[LAB]   authorized environments only
+[NOTE]  convert labs → writeups
+—
+$ ssh bandit0@bandit.labs.overthewire.org -p 2220
+$ sudo airmon-ng start wlan0
+$ sudo airodump-ng wlan0mon
+</code></pre>
 
-        <div class="col-md-6 col-lg-3">
-          <a href="tools.html" class="text-decoration-none text-light">
-            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
-              <div class="card-body text-center">
-                <div class="card-icon text-success"><i class="fa-solid fa-toolbox"></i></div>
-                <h5 class="fw-semibold mb-2">Tools & Techniques</h5>
-                <p class="mb-0 small">Wireshark, Nmap, Burp/ZAP, logovanie, detekcie a automatizácia.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="community.html" class="text-decoration-none text-light">
-            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
-              <div class="card-body text-center">
-                <div class="card-icon text-warning"><i class="fa-solid fa-users-gear"></i></div>
-                <h5 class="fw-semibold mb-2">Komunita</h5>
-                <p class="mb-0 small">Diskusia, poznámky, mini demo prvkov (chat/komentáre).</p>
-              </div>
-            </div>
-          </a>
-        </div>
+        <p class="small text-secondary mb-0 mt-3">
+          *feed je vizuálny, nie reálny monitoring.
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="zameranie" class="mb-5">
-      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧠</span>Zameranie</h2>
-      <div class="row justify-content-center gy-4 gx-3 futuristic-feature-row">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="futuristic-feature-card main card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-info"><i class="fa-solid fa-globe"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Web Security</div>
-            <div class="feature-desc small text-light opacity-85">OWASP, testovanie v lab-e, bezpečné nastavenia.</div>
-          </div>
+    <!-- COMMUNITY / RULES -->
+    <section class="ix-surface rounded-5 p-4 p-lg-5 mb-5 shadow-lg">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-8">
+          <h2 class="ix-title text-light mb-2">
+            <i class="fa-solid fa-people-group text-info me-2"></i>Komunita & pravidlá
+          </h2>
+          <p class="text-light-emphasis mb-0">
+            SENTRIX má byť miesto na učenie a zdieľanie. Cieľ je robiť veci správne:
+            legálne, eticky a bezpečne — s dôrazom na homelab, CTF a autorizované platformy.
+          </p>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-primary"><i class="fa-solid fa-network-wired"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Network Analysis</div>
-            <div class="feature-desc small text-light opacity-85">PCAP, DNS/HTTP/TLS, mapovanie a segmentácia.</div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-warning"><i class="fa-solid fa-binoculars"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Threat Hunting</div>
-            <div class="feature-desc small text-light opacity-85">Indikátory, detekcie, korelácie, hypotézy.</div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
-            <div class="feature-icon text-success"><i class="fa-solid fa-shield"></i></div>
-            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Blue Team</div>
-            <div class="feature-desc small text-light opacity-85">Logovanie, alerty, IR postupy, hardening.</div>
+
+        <div class="col-lg-4">
+          <div class="ix-badgebox rounded-4 p-4">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-user-shield me-2"></i>ethics</span>
+              <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-scale-balanced me-2"></i>legal</span>
+              <span class="ix-pill ix-pill-muted"><i class="fa-solid fa-lock me-2"></i>authorized only</span>
+            </div>
+            <a href="community.html" class="btn btn-outline-info w-100 mt-3 fw-bold">
+              <i class="fa-solid fa-comments me-2"></i>Komunita
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="kontakt" class="mb-4">
-      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧰</span>Nástroje (preview)</h2>
-      <div class="row justify-content-center gy-4">
-        <div class="col-sm-6 col-lg-3">
-          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
-            <div class="mb-2 fs-2 text-primary"><i class="fa-solid fa-diagram-project"></i></div>
-            <span class="badge bg-primary mb-2">Nmap</span>
-            <div class="small text-light">Mapovanie siete, porty, služby, NSE.</div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
-            <div class="mb-2 fs-2 text-success"><i class="fa-solid fa-wave-square"></i></div>
-            <span class="badge bg-success mb-2">Wireshark</span>
-            <div class="small text-light">PCAP analýza, protokoly, troubleshooting.</div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
-            <div class="mb-2 fs-2 text-info"><i class="fa-solid fa-spider"></i></div>
-            <span class="badge bg-info mb-2">Burp / ZAP</span>
-            <div class="small text-light">Web testovanie (v lab-e), proxy, repeater, scan.</div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
-            <div class="mb-2 fs-2 text-warning"><i class="fa-solid fa-terminal"></i></div>
-            <span class="badge bg-warning text-dark mb-2">Linux</span>
-            <div class="small text-light">Hardening, služby, logy, automatizácia.</div>
-          </div>
-        </div>
+    <!-- CTA -->
+    <section class="ix-cta text-center py-5 rounded-5 mb-3 shadow-lg">
+      <div class="display-6 fw-bold text-info mb-3">
+        <i class="fa-solid fa-book-skull me-2"></i>
+        Začni s prvým writeupom
       </div>
+      <p class="fs-4 text-light mb-4">
+        Najrýchlejší spôsob ako napredovať: jeden lab → poznámky → writeup → ďalší lab.
+      </p>
+      <a href="writeups.html" class="btn btn-lg btn-info btn-glow px-5 py-3 fs-5 fw-bold">
+        Prejsť na writeups
+      </a>
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/hlavny.js"></script>
+  <script src="js/transfo.js"></script>
 </body>
 
 </html>
