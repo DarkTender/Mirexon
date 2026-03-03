@@ -214,3 +214,32 @@
     background: rgba(2, 6, 23, 0.55);
     border: 1px solid rgba(56, 189, 248, 0.18);
   }
+=======
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.filter-chip {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tool-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Additional styling as needed */
+>>>>>>> f555c41de440f1f6a0bb923f5afe5da0bc489b4f
