@@ -20,22 +20,22 @@ SENTRIX™ je futuristická webová stránka (téma **cyber security**) určená
 
 ## Čo na stránke nájdeš
 
-- **Domov (`index.html`)**  
+- **Domov**  
   Úvod projektu + hlavné zamerania + rýchle odkazy.
 
-- **Writeups (`ai_platforma.html`)**  
+- **Writeups**  
   Sekcia pre články / lab notes. Neskôr bude napojená na databázu (CRUD nad článkami).
 
-- **Roadmap (`transformacia.html`)**  
+- **Roadmap**  
   Stránka s plánom vývoja (čo sa bude robiť a aké školské požiadavky projekt spĺňa).
 
-- **Tools (`techno_riesenia.html`)**  
+- **Tools**  
   Prehľad nástrojov a postupov (web, sieť, monitoring).
 
-- **Komunita (`komunita.html`)**  
+- **Komunita**  
   Demo prvkov (front-end chat/komentáre + mini hra).
 
-- **Login (`login.html`)**  
+- **Login**  
   Zatiaľ front-end UI. Neskôr sa prerobí na reálny login v PHP + MySQL (sessions).
 
 ---
