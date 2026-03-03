@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technologické riešenia | MIREXON™</title>
-  <meta name="description" content="MIREXON technologické riešenia: AI nástroje pre vývojárov, automatizáciu workflowov a inteligentný monitoring.">
+  <title>Tools & Techniques | SENTRIX™</title>
+  <meta name="description" content="SENTRIX™ Tools & Techniques – nástroje, postupy a monitoring pre cyber security lab (legálne, v kontrolovanom prostredí).">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="css/style.css" rel="stylesheet">
@@ -15,20 +15,22 @@
 
   <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-atom"></i>MIREXON</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic">
+      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-shield-halved"></i>SENTRIX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic"
+        aria-controls="navbarFuturistic" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarFuturistic">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
-          <li class="nav-item"><a class="nav-link" href="ai_platforma.html">AI Platforma</a></li>
-          <li class="nav-item"><a class="nav-link" href="transformacia.html">Transformácia budúcnosti</a></li>
-          <li class="nav-item"><a class="nav-link" href="komunita.html">Komunitný prístup</a></li>
-          <li class="nav-item"><a class="nav-link active" href="techno_riesenia.html">Technologické riešenia</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai_platforma.html">Writeups</a></li>
+          <li class="nav-item"><a class="nav-link active" href="techno_riesenia.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="komunita.html">Komunita</a></li>
         </ul>
+
         <div class="d-flex ms-lg-3 mt-3 mt-lg-0 gap-2">
-          <a href="login.html" class="btn">Sign in</a>
+          <a href="login.html" class="btn">Login</a>
         </div>
       </div>
     </div>
@@ -37,59 +39,64 @@
   <main class="container py-5" id="tech">
     <section class="tech-hero rounded-5 p-5 mb-5 text-light shadow-lg">
       <div class="d-flex flex-wrap gap-2 mb-3">
-        <span class="tech-pill text-info"><i class="fa-solid fa-code me-1"></i>AI pre vývojárov</span>
-        <span class="tech-pill text-success"><i class="fa-solid fa-diagram-project me-1"></i>Automatizácia workflowov</span>
-        <span class="tech-pill text-warning"><i class="fa-solid fa-wave-square me-1"></i>Monitoring & observabilita</span>
+        <span class="tech-pill text-info"><i class="fa-solid fa-globe me-1"></i>Web testing</span>
+        <span class="tech-pill text-success"><i class="fa-solid fa-network-wired me-1"></i>Network analysis</span>
+        <span class="tech-pill text-warning"><i class="fa-solid fa-eye me-1"></i>Logs & detection</span>
       </div>
+
       <h1 class="display-5 fw-bold mb-3">
-        <i class="fa-solid fa-gears text-info me-3"></i>
-        Technologické riešenia MIREXON™
+        <i class="fa-solid fa-toolbox text-info me-3"></i>
+        Tools & Techniques (SENTRIX™)
       </h1>
+
       <p class="lead fs-4 mb-3">
-        Balík moderných AI nástrojov, ktoré pomáhajú vývojárom, tímom a firmám doručovať projekty rýchlejšie, stabilnejšie a inteligentnejšie.
+        Zoznam nástrojov a postupov, ktoré používam pri učení. Cieľ je mať k tomu vždy aj writeup a “čo som sa naučil”.
       </p>
+
       <p class="mb-0 fs-5">
-        Od <strong>AI kódiaceho asistenta</strong>, cez <strong>automatizované workflowy</strong> až po 
-        <strong>monitoring AI služieb</strong> – všetko v jednom technologickom ekosystéme.
+        Všetko prebieha v <strong>homelab</strong> alebo v autorizovaných prostrediach (CTF).
       </p>
     </section>
 
     <section class="tech-section rounded-5 p-5 mb-5 shadow-lg">
       <h2 class="fs-2 fw-bold mb-4 text-light">
-        <span class="me-2">👨‍💻</span>AI nástroje pre vývojárov
+        <span class="me-2">🌐</span>Web Security toolbox
       </h2>
       <p class="text-light-emphasis mb-4">
-        Moderný vývoj softvéru sa opiera o AI asistenciu – generovanie kódu, vysvetľovanie existujúcich častí, písanie testov či automatické review. [web:72][web:81]
+        Proxy, testovanie inputov, session/cookies, základné zraniteľnosti (OWASP) – vždy s dôrazom na bezpečné praktiky.
       </p>
+
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="tool-card rounded-4 p-4 h-100 shadow">
-            <div class="fs-2 text-info mb-3"><i class="fa-solid fa-robot"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">CODEMIND™ – AI pair programmer</h3>
+            <div class="fs-2 text-info mb-3"><i class="fa-solid fa-spider"></i></div>
+            <h3 class="fs-5 fw-bold mb-2">Burp Suite / OWASP ZAP</h3>
             <p class="small text-light-emphasis mb-3">
-              Asistent, ktorý dopĺňa kód, navrhuje funkcie a pomáha pri refaktoringu. Funguje v IDE aj priamo v MIREXON dashboarde, podobne ako dnešné AI code asistenty. [web:72][web:84]
+              Intercept proxy, Repeater, intruder (lab), scanner – na pochopenie request/response a slabých miest.
             </p>
-            <span class="badge bg-info-subtle text-info code-badge">suggest() · fixBug() · explain()</span>
+            <span class="badge bg-info-subtle text-info code-badge">proxy() · repeater() · report()</span>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="tool-card rounded-4 p-4 h-100 shadow">
-            <div class="fs-2 text-primary mb-3"><i class="fa-solid fa-shapes"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">APPFORGE – generátor modulov</h3>
+            <div class="fs-2 text-primary mb-3"><i class="fa-solid fa-code"></i></div>
+            <h3 class="fs-5 fw-bold mb-2">Secure PHP patterns</h3>
             <p class="small text-light-emphasis mb-3">
-              Z krátkeho popisu vytvorí základ backendu, REST API alebo UI komponenty. Využíva prístup podobný moderným AI app builderom. [web:81][web:83]
+              PDO prepared statements, validácie, output escaping, CSRF tokeny (presne to využiješ v projekte).
             </p>
-            <span class="badge bg-primary-subtle text-primary code-badge">"Todo API in Node.js"</span>
+            <span class="badge bg-primary-subtle text-primary code-badge">PDO · CSRF · htmlspecialchars()</span>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="tool-card rounded-4 p-4 h-100 shadow">
-            <div class="fs-2 text-success mb-3"><i class="fa-solid fa-vial"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">AUTOTEST AI</h3>
+            <div class="fs-2 text-success mb-3"><i class="fa-solid fa-shield"></i></div>
+            <h3 class="fs-5 fw-bold mb-2">Auth & Sessions</h3>
             <p class="small text-light-emphasis mb-3">
-              Generuje unit a integration testy na základe kódu a scenárov používania. Znižuje riziko chýb pri release. [web:82][web:89]
+              Prihlásenie, sessions, password hashing, bezpečné cookies – základ pre tvoj login + admin CRUD.
             </p>
-            <span class="badge bg-success-subtle text-success code-badge">jest() · pytest() · e2e()</span>
+            <span class="badge bg-success-subtle text-success code-badge">session() · password_hash()</span>
           </div>
         </div>
       </div>
@@ -97,31 +104,32 @@
 
     <section class="tech-section rounded-5 p-5 mb-5 shadow-lg">
       <h2 class="fs-2 fw-bold mb-4 text-light">
-        <span class="me-2">🔁</span>AI automatizácia a integrácie
+        <span class="me-2">🕸️</span>Network & recon
       </h2>
       <p class="text-light-emphasis mb-4">
-        AI sa dnes používa na orchestráciu workflowov – prepojenie API, plánovanie úloh, automatické rozhodovanie na základe dát. [web:86][web:91]
+        Základná orientácia v sieti: scanning, DNS, služby, protokoly a analýza prevádzky v PCAP.
       </p>
+
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
           <div class="auto-card rounded-4 p-4 h-100">
-            <h3 class="fs-5 fw-bold mb-3"><i class="fa-solid fa-diagram-project me-2 text-info"></i>FLOWLINKER</h3>
+            <h3 class="fs-5 fw-bold mb-3"><i class="fa-solid fa-diagram-project me-2 text-info"></i>Nmap</h3>
             <ul class="small text-light-emphasis mb-3">
-              <li>Prepojenie AI modelov, databáz, REST API a front-end aplikácií.</li>
-              <li>Vizuálny editor workflowov (drag & drop uzly, AI rozhodovacie bloky).</li>
-              <li>Možnosť využitia multi-agent orchestration pre zložité procesy. [web:86][web:89]</li>
+              <li>Enumerácia portov a služieb (v lab-e).</li>
+              <li>Základné skripty (NSE) na pochopenie detekcií.</li>
+              <li>Dokumentácia výsledkov do writeupu.</li>
             </ul>
-            <span class="badge bg-info-subtle text-info code-badge">trigger → AI agent → webhook → notify()</span>
+            <span class="badge bg-info-subtle text-info code-badge">nmap -sV -A target</span>
           </div>
         </div>
+
         <div class="col-lg-6">
           <div class="auto-card rounded-4 p-4">
-            <h4 class="fs-6 fw-bold text-light mb-3">Príklad workflowu „Release s AI kontrolou“</h4>
+            <h4 class="fs-6 fw-bold text-light mb-3">Wireshark workflow (príklad)</h4>
             <ol class="small text-light-emphasis mb-0">
-              <li>Developer pushne kód na Git repo.</li>
-              <li>FLOWLINKER spustí build a testy.</li>
-              <li>AI modul urobí code review + analyzuje logy build pipeline. [web:82][web:91]</li>
-              <li>Ak je všetko v norme, workflow automaticky vytvorí release a pošle report tímu.</li>
+              <li>Capture alebo otvorenie PCAP.</li>
+              <li>Filtrovanie (dns, http, tls, ip.addr…).</li>
+              <li>Hľadanie anomálií + export indikátorov do poznámok.</li>
             </ol>
           </div>
         </div>
@@ -130,40 +138,43 @@
 
     <section class="tech-section rounded-5 p-5 mb-5 shadow-lg">
       <h2 class="fs-2 fw-bold mb-4 text-light">
-        <span class="me-2">📊</span>Monitoring, logy a AI observabilita
+        <span class="me-2">📊</span>Logy, monitoring, detekcie
       </h2>
       <p class="text-light-emphasis mb-4">
-        Pri AI systémoch je kľúčové sledovať nielen klasické metriky, ale aj chovanie modelov, kvalitu odpovedí, latenciu a náklady. [web:85][web:90]
+        Blue-team časť: čo logovať, ako robiť alerty a ako si pripraviť “incident notes”.
       </p>
+
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="monitor-card rounded-4 p-4 h-100 shadow">
-            <div class="fs-2 text-warning mb-3"><i class="fa-solid fa-wave-square"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">LOGSENSE</h3>
+            <div class="fs-2 text-warning mb-3"><i class="fa-solid fa-eye"></i></div>
+            <h3 class="fs-5 fw-bold mb-2">Log collection</h3>
             <p class="small text-light-emphasis mb-2">
-              AI analyzuje logy, kategorizuje chyby a hľadá anomálie v správaní služieb. [web:85][web:88]
+              Zber logov zo systému a služieb (auth, webserver, app logs) – základ pre korelácie.
             </p>
-            <span class="badge bg-warning-subtle text-warning code-badge">anomalyDetection()</span>
+            <span class="badge bg-warning-subtle text-warning code-badge">journalctl · nginx logs</span>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="monitor-card rounded-4 p-4 h-100 shadow">
             <div class="fs-2 text-danger mb-3"><i class="fa-solid fa-bell"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">SMART ALERTS</h3>
+            <h3 class="fs-5 fw-bold mb-2">Alerts (signal vs noise)</h3>
             <p class="small text-light-emphasis mb-2">
-              Inteligentné upozornenia, ktoré filtrujú šum a zvýraznia len skutočné problémy – napr. výpadky AI endpointov. [web:88][web:90]
+              Nastavenie alertov tak, aby dávali zmysel (prahy, kontext, výnimky).
             </p>
-            <span class="badge bg-danger-subtle text-danger code-badge">latency()>threshold</span>
+            <span class="badge bg-danger-subtle text-danger code-badge">rules · thresholds</span>
           </div>
         </div>
+
         <div class="col-lg-4">
           <div class="monitor-card rounded-4 p-4 h-100 shadow">
-            <div class="fs-2 text-success mb-3"><i class="fa-solid fa-gauge-high"></i></div>
-            <h3 class="fs-5 fw-bold mb-2">COST GUARD</h3>
+            <div class="fs-2 text-success mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="fs-5 fw-bold mb-2">Incident notes</h3>
             <p class="small text-light-emphasis mb-2">
-              Sleduje náklady na AI volania, optimalizuje počet requestov a navrhuje caching / batching stratégie. [web:90]
+              Triage checklist, timeline, čo som spravil a prečo (super na prezentáciu projektu).
             </p>
-            <span class="badge bg-success-subtle text-success code-badge">tokenUsage · budget()</span>
+            <span class="badge bg-success-subtle text-success code-badge">triage() · timeline()</span>
           </div>
         </div>
       </div>
@@ -171,13 +182,13 @@
 
     <section class="text-center py-5 rounded-5 bg-gradient bg-info bg-opacity-20 border border-info mb-4">
       <div class="display-6 fw-bold text-info mb-3">
-        Nasadiť technologické riešenia MIREXON
+        Ďalší krok: PHP + MySQL
       </div>
       <p class="fs-4 text-light mb-4">
-        Spoj AI asistenta, automatizáciu workflowov a monitoring do jedného ekosystému.
+        Login + CRUD článkov (writeups) bez frameworku, v OOP.
       </p>
       <a href="login.html" class="btn btn-lg btn-info px-5 py-3 fs-5 fw-bold">
-        <i class="fa-solid fa-plug me-2"></i>Prejsť do Tech Hubu
+        <i class="fa-solid fa-right-to-bracket me-2"></i>Login
       </a>
     </section>
   </main>
