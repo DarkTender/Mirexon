@@ -557,7 +557,7 @@ main {
   .futuristic-feature-card {
     margin-bottom: 1.5rem;
     border-radius: 1.1rem;
-    min-height: 150px;
+    min-height: 150px;}
   .ai-hero {
     background: linear-gradient(
       135deg,
@@ -565,26 +565,25 @@ main {
       rgba(56, 189, 248, 0.1) 100%
     );
   }
-    .photo-grid {
-      background: rgba(14, 14, 14, 0.6);
-      backdrop-filter: blur(20px);
-    }
-    .photo-item {
-      transition: all 0.4s ease;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-    .photo-item:hover {
-      transform: scale(1.05) rotate(2deg);
-      box-shadow: 0 30px 60px rgba(0, 255, 170, 0.4);
-    }
-    .photo-overlay {
-      background: linear-gradient(
-        45deg,
-        rgba(0, 255, 170, 0.8),
-        rgba(56, 189, 248, 0.8)
-      );
-    }
+  .photo-grid {
+    background: rgba(14, 14, 14, 0.6);
+    backdrop-filter: blur(20px);
+  }
+  .photo-item {
+    transition: all 0.4s ease;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .photo-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 30px 60px rgba(0, 255, 170, 0.4);
+  }
+  .photo-overlay {
+  background: linear-gradient(
+    45deg,
+  rgba(0, 255, 170, 0.8),
+  rgba(56, 189, 248, 0.8)
+    );
   }
 }
 .future-hero {
