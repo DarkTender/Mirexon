@@ -9,146 +9,89 @@
 **X**‑Ops  
 --- ™
 
-SENTRIX™ je môj **cyber security lab web** zameraný na:
-- **writeups & lab notes** (web security, networking, logy/detekcie),
-- prehľad používaných **tools & techniques**,
-- jednoduchú komunitnú sekciu (demo),
-- a hlavne ako základ pre školský projekt v **čistom PHP**.
+SENTRIX™ je futuristická webová stránka (téma **cyber security**) určená ako:
+- **lab/portfolio web** – miesto, kde budem publikovať vlastné **writeups** a poznámky,
+- prehľad mojich **tools & techniques** (napr. web testing, network analysis, logy/detekcie),
+- **roadmap** toho, ako sa projekt bude počas roka meniť na plnohodnotnú PHP aplikáciu.
 
-> Poznámka: všetko je určené na učenie a dokumentáciu v **legálnom, autorizovanom prostredí** (homelab/CTF).
-
----
-
-## 🎯 Cieľ projektu (škola)
-
-Tento projekt bude počas roka prerobený na web aplikáciu, ktorá spĺňa požiadavky:
-
-- **PHP 8.0+**
-- **MySQL 8.0+**
-- **OOP (objektovo orientované programovanie)**
-- **CRUD operácie** aspoň nad jednou entitou (napr. články/writeups)
-- **Login / sessions** (admin prístup)
-- **bez PHP frameworkov**
-- **bez CMS**
-- priebežné commitovanie do verejného repozitára
+> Všetky testy a ukážky sú myslené iba pre **legálne/autorizované prostredia** (homelab, CTF).
 
 ---
 
-## 🧱 Plánované entity (DB)
+## Čo na stránke nájdeš
 
-Minimálne:
-- **Articles / Writeups** (CRUD)  
-  `id, title, slug, content, created_at, updated_at`
+- **Domov (`index.html`)**  
+  Úvod projektu + hlavné zamerania + rýchle odkazy.
 
-Voliteľne (na rozšírenie a unikátnosť):
-- **Users** (login)  
-  `id, email, username, password_hash, created_at`
-- **Comments** (k článkom)  
-  `id, article_id, author, content, created_at`
-- **Tags** (kategórie)  
-  `id, name` + väzobná tabuľka `article_tags`
+- **Writeups (`ai_platforma.html`)**  
+  Sekcia pre články / lab notes. Neskôr bude napojená na databázu (CRUD nad článkami).
 
----
+- **Roadmap (`transformacia.html`)**  
+  Stránka s plánom vývoja (čo sa bude robiť a aké školské požiadavky projekt spĺňa).
 
-## ✅ Roadmap (high-level)
+- **Tools (`techno_riesenia.html`)**  
+  Prehľad nástrojov a postupov (web, sieť, monitoring).
 
-### Fáza 1 — UI (hotové / priebežne)
-- [x] Rebrand z “AI platformy” na **SENTRIX**
-- [x] Jednotné menu + stránka **Roadmap**
-- [x] Sekcie: Writeups / Roadmap / Tools / Komunita / Login
+- **Komunita (`komunita.html`)**  
+  Demo prvkov (front-end chat/komentáre + mini hra).
 
-### Fáza 2 — PHP základ (pripraviť štruktúru)
-- [ ] `public/index.php` (entry point)
-- [ ] `config/config.php` (DB nastavenia)
-- [ ] `app/Core/Database.php` (PDO)
-
-### Fáza 3 — CRUD: Articles
-- [ ] list článkov (READ)
-- [ ] detail článku (READ)
-- [ ] create článku (CREATE) — len po prihlásení
-- [ ] edit článku (UPDATE) — len po prihlásení
-- [ ] delete článku (DELETE) — len po prihlásení
-
-### Fáza 4 — Login (bez frameworku)
-- [ ] registrácia (voliteľne)
-- [ ] login/logout (sessions)
-- [ ] `password_hash()` / `password_verify()`
-- [ ] ochrana admin akcií
-
-### Fáza 5 — Bezpečnosť (na obhajobu)
-- [ ] PDO prepared statements (SQLi prevencia)
-- [ ] output escaping (XSS prevencia)
-- [ ] CSRF tokeny vo formulároch
-- [ ] validácie vstupov
-- [ ] bezpečné session nastavenia
+- **Login (`login.html`)**  
+  Zatiaľ front-end UI. Neskôr sa prerobí na reálny login v PHP + MySQL (sessions).
 
 ---
 
-## 🧰 Sekcie webu (aktuálne)
+## Ako spustiť projekt
 
-- **Domov**: prehľad projektu SENTRIX  
-- **Writeups**: lab notes + príprava na CRUD “Articles”  
-- **Roadmap**: plán projektu (PHP + MySQL + OOP + CRUD + login)  
-- **Tools**: nástroje a postupy (Nmap, Wireshark, Burp/ZAP, logy…)  
-- **Komunita**: front-end demo (chat/komentáre + mini hra)
+### 1) Najjednoduchšie (staticky)
+Otvor `index.html` v prehliadači (double-click).
 
----
-
-## 🛠️ Ako spustiť projekt
-
-### Varianta A: Staticky (najjednoduchšie)
-Stačí otvoriť `index.html` v prehliadači.
-
-> Niektoré veci (napr. fetch, routing, neskôr PHP) môžu vyžadovať lokálny server.
+> Niektoré veci môžu fungovať lepšie cez lokálny server (hlavne keď začneš robiť PHP).
 
 ---
 
-### Varianta B: VS Code Live Server
+### 2) VS Code Live Server
 1. Nainštaluj rozšírenie **Live Server**
-2. Pravým na `index.html` → **Open with Live Server**
+2. Pravým klikom na `index.html` → **Open with Live Server**
 
 ---
 
-### Varianta C: Python server
+### 3) Python lokálny server
+V priečinku projektu spusti:
+
 ```bash
 python -m http.server 8080
 ```
+
 Potom otvor:
 - http://localhost:8080/
 
 ---
 
-### Varianta D: XAMPP (Apache) — odporúčané pre budúce PHP
-Táto varianta sa hodí hlavne preto, že neskôr budeš robiť **PHP + MySQL**.
+### 4) XAMPP (odporúčané pre budúce PHP + MySQL)
+Táto varianta je ideálna, keď začneš prerábať projekt do PHP.
 
-1. Nainštaluj **XAMPP** (Windows/Linux/macOS).
-2. Spusť **XAMPP Control Panel**.
+1. Nainštaluj **XAMPP**
+2. Otvor **XAMPP Control Panel**
 3. Zapni:
    - **Apache**
-   - (voliteľne už teraz) **MySQL**
-4. Skopíruj alebo naklonuj projekt do XAMPP web rootu:
-   - Windows typicky: `C:\xampp\htdocs\`
-   - Linux typicky: `/opt/lampp/htdocs/`
-   - macOS typicky: `/Applications/XAMPP/htdocs/`
-
-   Odporúčané umiestnenie:
-   - `C:\xampp\htdocs\sentrx\` (alebo `sentrix\`)
-
+   - **MySQL** (môže byť už teraz)
+4. Skopíruj alebo naklonuj projekt do:
+   - Windows: `C:\xampp\htdocs\sentrix\`
+   - Linux: `/opt/lampp/htdocs/sentrix/`
+   - macOS: `/Applications/XAMPP/htdocs/sentrix/`
 5. Otvor v prehliadači:
    - `http://localhost/sentrix/`
-   - alebo ak si použil iný priečinok: `http://localhost/<nazov_priecinka>/`
-
-6. (Keď začneš robiť DB) phpMyAdmin:
+6. phpMyAdmin (keď budeš riešiť DB):
    - `http://localhost/phpmyadmin`
-
-> Pozn.: kým je web ešte čisto HTML, XAMPP je “overkill”, ale je to najlepšia príprava na finálnu PHP verziu.
 
 ---
 
-## 📌 Poznámky
-- Tento repozitár je commitovaný **priebežne**.
-- Cieľom je mať projekt unikátny v rámci ročníka (téma + dizajn + funkcionalita).
-- Obsah je zameraný na učenie a dokumentáciu (homelab/CTF).
+## Poznámka k budúcej PHP verzii (stručne)
+Cieľ je prerobiť projekt na aplikáciu v **čistom PHP 8 + MySQL**, ktorá bude obsahovať:
+- OOP štruktúru (DB trieda, repository, controllers…)
+- CRUD nad entitou **Articles/Writeups**
+- login/logout cez sessions
+- bezpečné spracovanie vstupov (PDO prepared statements, escaping, CSRF)
 
 ---
 © 2026 SENTRIX™
