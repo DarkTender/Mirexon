@@ -1,65 +1,120 @@
-# MIREXON™
-**M**ystery ---
-**I**ntellect ---
-**R**evelation ---
-**E**xistence ---
-**X**eno ---
-**O**rigin ---
-**N**eural ---
+# SENTRIX™ — Cyber Security Lab & Writeups
+
+**S**ecurity  
+**E**vent  
+**N**etwork  
+**T**hreat  
+**R**esponse  
+**I**ntelligence  
+**X**‑Ops  
 --- ™
 
-MIREXON™ je **inovatívna technologická platforma**, ktorá kombinuje **pokročilé AI nástroje** a **technológie** na **transformáciu budúcnosti**. Cieľom je vytvoriť prostredie, ktoré bude slúžiť na riešenie komplexných problémov pomocou umelej inteligencie, špičkových nástrojov a efektívnych systémov. MIREXON™ je predurčený stať sa lídrom v oblasti **AI**, **spoločenských inovácií** a **pokročilých technológií**.
+SENTRIX™ je môj **cyber security lab web** zameraný na:
+- **writeups & lab notes** (web security, networking, logy/detekcie),
+- prehľad používaných **tools & techniques**,
+- jednoduchú komunitnú sekciu (demo),
+- a hlavne ako základ pre školský projekt v **čistom PHP**.
+
+> Poznámka: všetko je určené na učenie a dokumentáciu v **legálnom, autorizovanom prostredí** (homelab/CTF).
 
 ---
 
-## 🚀 **Ciele MIREXON™**
+## 🎯 Cieľ projektu (škola)
 
-- **AI Platforma**: MIREXON™ ponúka nástroje poháňané **umelou inteligenciou**, ktoré môžu byť využívané na tvorbu pokročilého obsahu, predikciu dát a rozvoj nových technológií.
-  
-- **Transformácia budúcnosti**: Naša vízia je použiť **neurovzdielané systémy** a **pokročilé AI** na riešenie problémov spoločnosti a priemyslu.
+Tento projekt bude počas roka prerobený na web aplikáciu, ktorá spĺňa požiadavky:
 
-- **Komunitný prístup**: MIREXON™ vytvára komunity zamerané na **inteligentné a odvážne** osoby, ktoré sa podieľajú na **inováciách** a **transformácii sveta**.
-
-- **Technologické riešenia**: MIREXON™ bude zahŕňať širokú škálu nástrojov, ktoré sú navrhnuté na zlepšenie rôznych oblastí – od **umelého generovania obsahu** po **pokročilé analytické nástroje**.
-
----
-
-## 🧠 **Hlavné funkcie**
-
-- **GENIMIND™** – **Tvorba obsahu poháňaná AI**, ktorá dokáže generovať zmysluplné a kreativne texty na základe vstupných údajov.
-- **LOGIX AI** – **Pokročilé analytické nástroje**, ktoré predpovedajú budúce trendy na základe analýzy dát.
-- **VISIONARY** – **Počítačové videnie**, ktoré mapuje a rozpoznáva objekty v reálnom svete.
-- **NEURALINKER** – **Prepojenie všetkých AI nástrojov do jednej synchronizovanej siete**.
+- **PHP 8.0+**
+- **MySQL 8.0+**
+- **OOP (objektovo orientované programovanie)**
+- **CRUD operácie** aspoň nad jednou entitou (napr. články/writeups)
+- **Login / sessions** (admin prístup)
+- **bez PHP frameworkov**
+- **bez CMS**
+- priebežné commitovanie do verejného repozitára
 
 ---
 
-## 💡 **Budúcnosť MIREXON™**
+## 🧱 Plánované entity (DB)
 
-- **Space Expansion**: Plánujeme rozšírenie do **vesmírneho priemyslu** s cieľom vytvoriť systém pre prieskum nových svetov a možnosť využívania pokročilých technológií v neznámom prostredí.
-- **AI for the Future**: S využitím **neuroinšpirovaných modelov** budeme pokračovať vo vývoji **inteligentných systémov**, ktoré sú zamerané na zlepšovanie kvality života a zvýšenie efektivity v rôznych odvetviach.
+Minimálne:
+- **Articles / Writeups** (CRUD)  
+  `id, title, slug, content, created_at, updated_at`
 
----
-
-## 🔐 **Zabezpečenie a ochrana údajov**
-
-MIREXON™ používa **najmodernejšie bezpečnostné protokoly** na ochranu údajov používateľov a zabezpečenie, že všetky AI nástroje fungujú v rámci etických a bezpečných hraníc.
-
----
-
-## ⚙️ **Technológie použité v MIREXON™**
-
-- **Next.js**: Pre **rýchle a dynamické webové aplikácie** s možnosťou server-side rendering.
-- **MongoDB**: Na **správu databázy** a ukladanie údajov o používateľoch a kreditoch.
-- **OpenAI**: Pre **poháňanie pokročilých AI nástrojov**.
-- **TailwindCSS**: Pre **rýchly a flexibilný dizajn** aplikácie.
+Voliteľne (na rozšírenie a unikátnosť):
+- **Users** (login)  
+  `id, email, username, password_hash, created_at`
+- **Comments** (k článkom)  
+  `id, article_id, author, content, created_at`
+- **Tags** (kategórie)  
+  `id, name` + väzobná tabuľka `article_tags`
 
 ---
 
-## 🛠️ **Ako spustiť projekt**
+## ✅ Roadmap (high-level)
 
-Ak chcete spustiť tento projekt lokálne, použite nasledujúce príkazy:
+### Fáza 1 — UI (hotové / priebežne)
+- [x] Rebrand z “AI platformy” na **SENTRIX**
+- [x] Jednotné menu + stránka **Roadmap**
+- [x] Sekcie: Writeups / Tools / Komunita / Login
 
-1. **Klonujte repozitár**:
+### Fáza 2 — PHP základ (pripraviť štruktúru)
+- [ ] `public/index.php` (entry point)
+- [ ] `config/config.php` (DB nastavenia)
+- [ ] `app/Core/Database.php` (PDO)
 
+### Fáza 3 — CRUD: Articles
+- [ ] list článkov (READ)
+- [ ] detail článku (READ)
+- [ ] create článku (CREATE) — len po prihlásení
+- [ ] edit článku (UPDATE) — len po prihlásení
+- [ ] delete článku (DELETE) — len po prihlásení
+
+### Fáza 4 — Login (bez frameworku)
+- [ ] registrácia (voliteľne)
+- [ ] login/logout (sessions)
+- [ ] `password_hash()` / `password_verify()`
+- [ ] ochrana admin akcií
+
+### Fáza 5 — Bezpečnosť (na obhajobu)
+- [ ] PDO prepared statements (SQLi prevencia)
+- [ ] output escaping (XSS prevencia)
+- [ ] CSRF tokeny vo formulároch
+- [ ] validácie vstupov
+- [ ] bezpečné session nastavenia
+
+---
+
+## 🧰 Sekcie webu (aktuálne)
+
+- **Domov**: prehľad projektu SENTRIX  
+- **Writeups**: lab notes + príprava na CRUD “Articles”  
+- **Roadmap**: plán projektu (PHP + MySQL + OOP + CRUD + login)  
+- **Tools**: nástroje a postupy (Nmap, Wireshark, Burp/ZAP, logy…)  
+- **Komunita**: front-end demo (chat/komentáre + mini hra)
+
+---
+
+## 🛠️ Ako spustiť projekt (aktuálne – staticky)
+
+Stačí otvoriť `index.html` v prehliadači, alebo použiť jednoduchý lokálny server.
+
+### Varianta A: VS Code Live Server
+1. Nainštaluj rozšírenie **Live Server**
+2. Pravým na `index.html` → **Open with Live Server**
+
+### Varianta B: Python server
 ```bash
-git clone https://github.com/DarkTender/mirexon.git
+python -m http.server 8080
+```
+Potom otvor:
+- http://localhost:8080/
+
+---
+
+## 📌 Poznámky
+- Tento repozitár je commitovaný **priebežne**.
+- Cieľom je mať projekt unikátny v rámci ročníka (téma + dizajn + funkcionalita).
+- Obsah je zameraný na učenie a dokumentáciu (homelab/CTF).
+
+---
+© 2026 SENTRIX™
