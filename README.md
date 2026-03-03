@@ -55,7 +55,7 @@ Voliteľne (na rozšírenie a unikátnosť):
 ### Fáza 1 — UI (hotové / priebežne)
 - [x] Rebrand z “AI platformy” na **SENTRIX**
 - [x] Jednotné menu + stránka **Roadmap**
-- [x] Sekcie: Writeups / Tools / Komunita / Login
+- [x] Sekcie: Writeups / Roadmap / Tools / Komunita / Login
 
 ### Fáza 2 — PHP základ (pripraviť štruktúru)
 - [ ] `public/index.php` (entry point)
@@ -94,20 +94,54 @@ Voliteľne (na rozšírenie a unikátnosť):
 
 ---
 
-## 🛠️ Ako spustiť projekt (aktuálne – staticky)
+## 🛠️ Ako spustiť projekt
 
-Stačí otvoriť `index.html` v prehliadači, alebo použiť jednoduchý lokálny server.
+### Varianta A: Staticky (najjednoduchšie)
+Stačí otvoriť `index.html` v prehliadači.
 
-### Varianta A: VS Code Live Server
+> Niektoré veci (napr. fetch, routing, neskôr PHP) môžu vyžadovať lokálny server.
+
+---
+
+### Varianta B: VS Code Live Server
 1. Nainštaluj rozšírenie **Live Server**
 2. Pravým na `index.html` → **Open with Live Server**
 
-### Varianta B: Python server
+---
+
+### Varianta C: Python server
 ```bash
 python -m http.server 8080
 ```
 Potom otvor:
 - http://localhost:8080/
+
+---
+
+### Varianta D: XAMPP (Apache) — odporúčané pre budúce PHP
+Táto varianta sa hodí hlavne preto, že neskôr budeš robiť **PHP + MySQL**.
+
+1. Nainštaluj **XAMPP** (Windows/Linux/macOS).
+2. Spusť **XAMPP Control Panel**.
+3. Zapni:
+   - **Apache**
+   - (voliteľne už teraz) **MySQL**
+4. Skopíruj alebo naklonuj projekt do XAMPP web rootu:
+   - Windows typicky: `C:\xampp\htdocs\`
+   - Linux typicky: `/opt/lampp/htdocs/`
+   - macOS typicky: `/Applications/XAMPP/htdocs/`
+
+   Odporúčané umiestnenie:
+   - `C:\xampp\htdocs\sentrx\` (alebo `sentrix\`)
+
+5. Otvor v prehliadači:
+   - `http://localhost/sentrix/`
+   - alebo ak si použil iný priečinok: `http://localhost/<nazov_priecinka>/`
+
+6. (Keď začneš robiť DB) phpMyAdmin:
+   - `http://localhost/phpmyadmin`
+
+> Pozn.: kým je web ešte čisto HTML, XAMPP je “overkill”, ale je to najlepšia príprava na finálnu PHP verziu.
 
 ---
 
