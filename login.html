@@ -44,9 +44,6 @@
         <span class="toggle-link" onclick="toggleForm()">Nemáte účet? Registrujte sa</span>
       </div>
 
-      <div class="mt-3 small text-secondary">
-        Pozn.: Momentálne je to front-end UI. Neskôr tu bude čisté PHP 8 + MySQL login (sessions + password_hash).
-      </div>
     </form>
 
     <form id="registerForm" autocomplete="off" style="display:none;">
@@ -71,9 +68,6 @@
         <span class="toggle-link" onclick="toggleForm()">Máte účet? Prihláste sa</span>
       </div>
 
-      <div class="mt-3 small text-secondary">
-        Neskôr bude registrácia ukladať používateľa do DB (users) a heslo bude uložené cez <code>password_hash()</code>.
-      </div>
     </form>
 
     <form id="resetForm" autocomplete="off" style="display:none;">
@@ -87,9 +81,6 @@
         <span class="toggle-link" onclick="showLogin()">Naspäť na prihlasovanie</span>
       </div>
 
-      <div class="mt-3 small text-secondary">
-        Pozn.: reset hesla bude neskôr riešený backendom (token + expiry v DB).
-      </div>
     </form>
 
     <div class="other-box">
@@ -109,11 +100,6 @@
         <span class="provider-icon"><i class="bi bi-apple" style="font-size:22px;"></i></span>
         Apple
       </button>
-
-      <div class="mt-2 small text-secondary">
-        Pri školskom projekte budeš mať vlastný login v PHP (bez OAuth), aby si splnil požiadavky.
-      </div>
-    </div>
 
     <div class="auth-footer">
       &copy; 2026 SENTRIX™
