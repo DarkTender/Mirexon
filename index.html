@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTRIX™ | Cyber Security Lab</title>
+  <meta name="description"
+    content="SENTRIX™ — Cyber Security Lab & Writeups. Praktické poznámky, homelab, nástroje a bezpečnostné experimenty v legálnom prostredí.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <canvas id="neural-canvas"></canvas>
+
+  <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-shield-halved"></i>SENTRIX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic"
+        aria-controls="navbarFuturistic" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarFuturistic">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Domov</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai_platforma.html">Writeups</a></li>
+          <li class="nav-item"><a class="nav-link" href="transformacia.html">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="techno_riesenia.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="komunita.html">Komunita</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0 gap-2">
+          <a href="login.html" class="btn">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="futuristic-title">SENTRIX<sup style="font-size:1rem;color:#38bdf8;">™</sup></h1>
+
+    <p class="futuristic-subtitle">
+      <span><i class="fa-solid fa-network-wired"></i>Network</span>
+      <span><i class="fa-solid fa-bug"></i>Web Security</span>
+      <span><i class="fa-solid fa-eye"></i>Monitoring</span>
+      <span><i class="fa-solid fa-book"></i>Writeups</span>
+    </p>
+
+    <div class="mirexon-letters mb-5">
+      <div class="flip-card" tabindex="0" aria-label="Security">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">S</div>
+          <div class="flip-card-back shadow">Security<span>Bezpečnostné princípy, obrana a testovanie v lab-e.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Event">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">E</div>
+          <div class="flip-card-back shadow">Event<span>Udalosti, logy a signály z infraštruktúry.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Network">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">N</div>
+          <div class="flip-card-back shadow">Network<span>Packet analýza, segmentácia, DNS/HTTP/TLS.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Threat">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">T</div>
+          <div class="flip-card-back shadow">Threat<span>Hrozby, útoky v kontrolovanom prostredí, TTPs.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Response">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">R</div>
+          <div class="flip-card-back shadow">Response<span>Incident response, triage, postupy a playbooky.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="Intelligence">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">I</div>
+          <div class="flip-card-back shadow">Intelligence<span>Threat intel, IOC, kontext a korelácie.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0" aria-label="X-Ops">
+        <div class="flip-card-inner">
+          <div class="flip-card-front shadow">X</div>
+          <div class="flip-card-back shadow">X‑Ops<span>Automatizácia, skripty, bezpečný ops mindset.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="sekcie" class="mb-5">
+      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧭</span>Rýchle odkazy</h2>
+      <div class="row gy-4 justify-content-center">
+        <div class="col-md-6 col-lg-3">
+          <a href="ai_platforma.html" class="text-decoration-none text-light">
+            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
+              <div class="card-body text-center">
+                <div class="card-icon text-info"><i class="fa-solid fa-book-skull"></i></div>
+                <h5 class="fw-semibold mb-2">Writeups</h5>
+                <p class="mb-0 small">Poznámky z labu, OWASP témy, postupy, lessons learned.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <a href="transformacia.html" class="text-decoration-none text-light">
+            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
+              <div class="card-body text-center">
+                <div class="card-icon text-primary"><i class="fa-solid fa-route"></i></div>
+                <h5 class="fw-semibold mb-2">Roadmap</h5>
+                <p class="mb-0 small">Plán projektu: PHP 8 + MySQL, OOP, login, CRUD článkov.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <a href="techno_riesenia.html" class="text-decoration-none text-light">
+            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
+              <div class="card-body text-center">
+                <div class="card-icon text-success"><i class="fa-solid fa-toolbox"></i></div>
+                <h5 class="fw-semibold mb-2">Tools & Techniques</h5>
+                <p class="mb-0 small">Wireshark, Nmap, Burp/ZAP, logovanie, detekcie a automatizácia.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <a href="komunita.html" class="text-decoration-none text-light">
+            <div class="futuristic-card card h-100 bg-transparent border-0 text-light shadow-lg card-link-hover">
+              <div class="card-body text-center">
+                <div class="card-icon text-warning"><i class="fa-solid fa-users-gear"></i></div>
+                <h5 class="fw-semibold mb-2">Komunita</h5>
+                <p class="mb-0 small">Diskusia, poznámky, mini demo prvkov (chat/komentáre).</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="zameranie" class="mb-5">
+      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧠</span>Zameranie</h2>
+      <div class="row justify-content-center gy-4 gx-3 futuristic-feature-row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="futuristic-feature-card main card h-100 border-0 shadow-lg text-center text-light">
+            <div class="feature-icon text-info"><i class="fa-solid fa-globe"></i></div>
+            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Web Security</div>
+            <div class="feature-desc small text-light opacity-85">OWASP, testovanie v lab-e, bezpečné nastavenia.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
+            <div class="feature-icon text-primary"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Network Analysis</div>
+            <div class="feature-desc small text-light opacity-85">PCAP, DNS/HTTP/TLS, mapovanie a segmentácia.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
+            <div class="feature-icon text-warning"><i class="fa-solid fa-binoculars"></i></div>
+            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Threat Hunting</div>
+            <div class="feature-desc small text-light opacity-85">Indikátory, detekcie, korelácie, hypotézy.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="futuristic-feature-card card h-100 border-0 shadow-lg text-center text-light">
+            <div class="feature-icon text-success"><i class="fa-solid fa-shield"></i></div>
+            <div class="feature-title fw-bold fs-5 mt-2 mb-1">Blue Team</div>
+            <div class="feature-desc small text-light opacity-85">Logovanie, alerty, IR postupy, hardening.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="mb-4">
+      <h2 class="fs-2 fw-bold text-center mb-4 text-light"><span class="me-2">🧰</span>Nástroje (preview)</h2>
+      <div class="row justify-content-center gy-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
+            <div class="mb-2 fs-2 text-primary"><i class="fa-solid fa-diagram-project"></i></div>
+            <span class="badge bg-primary mb-2">Nmap</span>
+            <div class="small text-light">Mapovanie siete, porty, služby, NSE.</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
+            <div class="mb-2 fs-2 text-success"><i class="fa-solid fa-wave-square"></i></div>
+            <span class="badge bg-success mb-2">Wireshark</span>
+            <div class="small text-light">PCAP analýza, protokoly, troubleshooting.</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
+            <div class="mb-2 fs-2 text-info"><i class="fa-solid fa-spider"></i></div>
+            <span class="badge bg-info mb-2">Burp / ZAP</span>
+            <div class="small text-light">Web testovanie (v lab-e), proxy, repeater, scan.</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="bg-dark bg-opacity-80 rounded-4 shadow-lg p-3 text-center">
+            <div class="mb-2 fs-2 text-warning"><i class="fa-solid fa-terminal"></i></div>
+            <span class="badge bg-warning text-dark mb-2">Linux</span>
+            <div class="small text-light">Hardening, služby, logy, automatizácia.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/hlavny.js"></script>
+</body>
+
+</html>
