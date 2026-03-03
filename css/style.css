@@ -558,13 +558,13 @@ main {
     margin-bottom: 1.5rem;
     border-radius: 1.1rem;
     min-height: 150px;
-    .ai-hero {
-      background: linear-gradient(
-        135deg,
-        rgba(0, 255, 170, 0.1) 0%,
-        rgba(56, 189, 248, 0.1) 100%
-      );
-    }
+  .ai-hero {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 170, 0.1) 0%,
+      rgba(56, 189, 248, 0.1) 100%
+    );
+  }
     .photo-grid {
       background: rgba(14, 14, 14, 0.6);
       backdrop-filter: blur(20px);
