@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roadmap | SENTRIX™</title>
-  <meta name="description" content="SENTRIX™ roadmap – plán učenia a vývoja: writeups, login, CRUD v čistom PHP 8 a MySQL.">
+  <meta name="description"
+    content="SENTRIX™ roadmap – Kanban plán: čo robím teraz, čo bude nasledovať a čo neskôr (PHP 8 + MySQL, OOP, CRUD, login, bezpečnosť).">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="css/style.css" rel="stylesheet">
@@ -23,9 +26,9 @@
 
       <div class="collapse navbar-collapse" id="navbarFuturistic">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Domov</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
           <li class="nav-item"><a class="nav-link" href="writeups.html">Writeups</a></li>
-          <li class="nav-item"><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link active" href="roadmap.html">Roadmap</a></li>
           <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
           <li class="nav-item"><a class="nav-link" href="community.html">Komunita</a></li>
         </ul>
@@ -38,147 +41,298 @@
   </nav>
 
   <main class="container py-5" id="roadmap">
-    <section class="future-hero rounded-5 p-5 mb-5 text-center text-light shadow-lg">
-      <h1 class="display-4 fw-bold mb-4">
+    <!-- HERO -->
+    <section class="future-hero rounded-5 p-5 mb-4 text-center text-light shadow-lg">
+      <h1 class="display-4 fw-bold mb-3">
         <i class="fa-solid fa-route text-primary me-3"></i>
-        SENTRIX Roadmap
+        Roadmap
+        <span class="d-block mt-2 fs-5 fw-semibold text-info opacity-90">Kanban: Now / Next / Later</span>
       </h1>
-      <p class="lead fs-3 opacity-90 mb-4">Plán učenia + plán projektu (PHP 8 + MySQL, OOP, CRUD)</p>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <p class="fs-5 mb-0">
-            Tento web začína ako statická cyber security stránka (writeups + tools).
-            Postupne sa zmení na školský projekt: <strong>OOP</strong> + <strong>CRUD nad článkami</strong> +
-            <strong>login</strong> v čistom PHP bez frameworku a s databázou MySQL.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="photo-grid rounded-5 p-5 mb-5 shadow-lg">
-      <h2 class="fs-2 fw-bold text-center mb-5 text-primary">
-        <i class="fa-solid fa-mountain me-2"></i>Milníky (high-level)
-      </h2>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-          <div class="photo-item h-100 position-relative">
-            <img src="img/tran1.jpeg" class="w-100 h-100 object-fit-cover" alt="Writeups & obsah">
-            <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-4 text-white">
-              <h5 class="fw-bold mb-1">Writeups</h5>
-              <small>Obsah, kategórie, navigácia, konzistentný dizajn</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="photo-item h-100 position-relative">
-            <img src="img/tran2.jpeg" class="w-100 h-100 object-fit-cover" alt="PHP & MySQL">
-            <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-4 text-white">
-              <h5 class="fw-bold mb-1">PHP 8 + MySQL</h5>
-              <small>PDO, OOP štruktúra, CRUD pre články</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="photo-item h-100 position-relative">
-            <img src="img/tran3.jpeg" class="w-100 h-100 object-fit-cover" alt="Login a bezpečnosť">
-            <div class="photo-overlay position-absolute bottom-0 start-0 w-100 p-4 text-white">
-              <h5 class="fw-bold mb-1">Login & Security</h5>
-              <small>sessions, password_hash, CSRF, output escaping</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="mt-4 mb-0 small text-secondary text-center">
-        Obrázky môžeš neskôr vymeniť za vlastné (napr. screenshoty z logov, dashboardov, labu).
+      <p class="lead fs-4 opacity-90 mb-0">
+        Prehľad vývoja SENTRIX: od statického portfólia → po školský projekt v <strong>čistom PHP 8 + MySQL</strong>
+        (OOP, CRUD, login, bezpečnosť).
       </p>
     </section>
 
-    <section class="mb-5">
-      <h2 class="fs-2 fw-bold text-center mb-5 text-light">
-        <span class="me-2">🧱</span>Požiadavky projektu (checklist)
-      </h2>
-
-      <div class="row gy-4">
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-60 border border-primary">
-            <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-cubes"></i></div>
-            <h5 class="fw-bold mb-3">OOP + čisté PHP</h5>
-            <p class="text-light-emphasis">
-              Triedy pre DB, repository, autentifikáciu. Žiadny framework/CMS.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-60 border border-info">
-            <div class="fs-1 text-info mb-3"><i class="fa-solid fa-database"></i></div>
-            <h5 class="fw-bold mb-3">MySQL 8 + PDO</h5>
-            <p class="text-light-emphasis">
-              Prepared statements, správne typy, timestampy, migrácia cez SQL súbor.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="text-center p-4 h-100 rounded-4 bg-dark bg-opacity-60 border border-success">
-            <div class="fs-1 text-success mb-3"><i class="fa-solid fa-pen-to-square"></i></div>
-            <h5 class="fw-bold mb-3">CRUD článkov</h5>
-            <p class="text-light-emphasis">
-              Create/Read/Update/Delete aspoň nad entitou “writeup/article”.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-5">
-      <h2 class="fs-2 fw-bold text-center mb-4 text-light">
-        <span class="me-2">📈</span>Konkrétny postup (kroky)
-      </h2>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <ul class="list-group list-group-flush bg-transparent">
-            <li class="list-group-item bg-transparent text-light d-flex align-items-center">
-              <span class="badge bg-primary rounded-pill me-3">1</span>
-              Upratať UI: jednotná navigácia, SENTRIX texty, odstrániť AI branding.
-            </li>
-            <li class="list-group-item bg-transparent text-light d-flex align-items-center">
-              <span class="badge bg-info rounded-pill me-3">2</span>
-              Pridať DB schému: tabuľka <code>users</code> a <code>articles</code>.
-            </li>
-            <li class="list-group-item bg-transparent text-light d-flex align-items-center">
-              <span class="badge bg-success rounded-pill me-3">3</span>
-              CRUD pre články (admin): create/edit/delete iba po prihlásení.
-            </li>
-            <li class="list-group-item bg-transparent text-light d-flex align-items-center">
-              <span class="badge bg-warning text-dark rounded-pill me-3">4</span>
-              Bezpečnosť: CSRF tokeny, output escaping, validácie, session settings.
-            </li>
-          </ul>
-
-          <p class="mt-3 small text-secondary">
-            Tip na obhajobu: ukáž, že rozumieš prečo používaš <strong>prepared statements</strong> (SQLi),
-            prečo robíš <strong>escaping</strong> (XSS) a prečo je <strong>CSRF token</strong> nutný.
+    <!-- QUICK STATUS -->
+    <section class="rounded-5 p-4 p-lg-5 mb-5 shadow-lg photo-grid">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-2 text-info">
+            <i class="fa-solid fa-signal me-2"></i>Stav projektu
+          </h2>
+          <p class="mb-0 text-light-emphasis">
+            Táto stránka je roadmap dashboard. Časom sa sem môže napojiť reálny backend (napr. z DB),
+            ale zatiaľ je to „živý plán“ – čo je hotové, čo robím a čo príde.
           </p>
         </div>
+
+        <div class="col-lg-4">
+          <div class="p-4 rounded-4 bg-dark bg-opacity-50 border border-info">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-light">Core goals</span>
+              <span class="tag"><i class="fa-solid fa-bullseye me-2"></i>PHP + MySQL</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tag"><i class="fa-solid fa-cubes me-2"></i>OOP</span>
+              <span class="tag"><i class="fa-solid fa-database me-2"></i>PDO</span>
+              <span class="tag"><i class="fa-solid fa-pen-to-square me-2"></i>CRUD</span>
+              <span class="tag"><i class="fa-solid fa-user-lock me-2"></i>Login</span>
+              <span class="tag"><i class="fa-solid fa-shield me-2"></i>Security</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="text-center py-5 rounded-5 bg-gradient bg-primary bg-opacity-25 border border-primary mb-5">
-      <div class="display-6 fw-bold text-primary mb-3">
-        Ďalší krok: Dashboard (CRUD)
+    <!-- KANBAN -->
+    <section class="mb-5">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4">
+        <div>
+          <h2 class="fw-bold text-light mb-1">
+            <i class="fa-solid fa-layer-group text-info me-2"></i>Roadmap board
+          </h2>
+          <p class="mb-0 text-secondary">
+            Karty sú písané tak, aby sa dali priamo premeniť na TODO v škole (a neskôr na GitHub Issues).
+          </p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+          <span class="tag"><i class="fa-solid fa-tag me-2"></i>UI</span>
+          <span class="tag"><i class="fa-solid fa-tag me-2"></i>Backend</span>
+          <span class="tag"><i class="fa-solid fa-tag me-2"></i>Security</span>
+          <span class="tag"><i class="fa-solid fa-tag me-2"></i>Writeups</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- NOW -->
+        <div class="col-lg-4">
+          <div class="p-4 rounded-5 bg-dark bg-opacity-50 border border-info shadow-lg h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h4 fw-bold text-info mb-0">
+                <i class="fa-solid fa-bolt me-2"></i>NOW
+              </h3>
+              <span class="tag">Aktuálne</span>
+            </div>
+
+            <div class="vstack gap-3">
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">Upratanie UI + konzistentné podstránky</h4>
+                  <span class="tag"><i class="fa-solid fa-palette me-2"></i>UI</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Zjednotiť layout, texty, navigáciu a štýl tak, aby stránka pôsobila ako jeden projekt.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">writeups.html</span>
+                  <span class="tag">roadmap.html</span>
+                  <span class="tag">tools.html</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">Pripraviť „fake data“ šablóny článkov</h4>
+                  <span class="tag"><i class="fa-solid fa-book me-2"></i>Writeups</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Vytvoriť 4–6 ukážkových kariet článkov (title, tags, date, excerpt) – neskôr sa napoja na DB.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">tags</span>
+                  <span class="tag">search</span>
+                  <span class="tag">kategórie</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">Základ bezpečnostných pravidiel (na webe)</h4>
+                  <span class="tag"><i class="fa-solid fa-shield-halved me-2"></i>Security</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Pridať jasné disclaimery a „safe lab only“ pravidlá, plus krátke vysvetlenie XSS/SQLi/CSRF.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">legal</span>
+                  <span class="tag">ethics</span>
+                  <span class="tag">safe lab</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEXT -->
+        <div class="col-lg-4">
+          <div class="p-4 rounded-5 bg-dark bg-opacity-50 border border-primary shadow-lg h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h4 fw-bold text-primary mb-0">
+                <i class="fa-solid fa-forward me-2"></i>NEXT
+              </h3>
+              <span class="tag">Nasleduje</span>
+            </div>
+
+            <div class="vstack gap-3">
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">DB schéma (users + articles)</h4>
+                  <span class="tag"><i class="fa-solid fa-database me-2"></i>Backend</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Navrhnúť tabuľky + constraints + indexy. Pripraviť <code>.sql</code> súbor na import.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">users</span>
+                  <span class="tag">articles</span>
+                  <span class="tag">timestamps</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">OOP štruktúra v PHP</h4>
+                  <span class="tag"><i class="fa-solid fa-cubes me-2"></i>OOP</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  DB wrapper (PDO), repositories, controllers, jednoduchý router, templates.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">Database.php</span>
+                  <span class="tag">ArticleRepository</span>
+                  <span class="tag">Auth</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">Login + sessions</h4>
+                  <span class="tag"><i class="fa-solid fa-user-lock me-2"></i>Auth</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  password_hash / password_verify, session hardening, logout, flash messages.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">password_hash</span>
+                  <span class="tag">sessions</span>
+                  <span class="tag">logout</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- LATER -->
+        <div class="col-lg-4">
+          <div class="p-4 rounded-5 bg-dark bg-opacity-50 border border-success shadow-lg h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h4 fw-bold text-success mb-0">
+                <i class="fa-solid fa-hourglass-half me-2"></i>LATER
+              </h3>
+              <span class="tag">Neskôr</span>
+            </div>
+
+            <div class="vstack gap-3">
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">CRUD článkov (admin panel)</h4>
+                  <span class="tag"><i class="fa-solid fa-pen-to-square me-2"></i>CRUD</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Create / Edit / Delete iba po prihlásení. Public list + detail článku.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">admin</span>
+                  <span class="tag">forms</span>
+                  <span class="tag">validation</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">CSRF + output escaping + validácie</h4>
+                  <span class="tag"><i class="fa-solid fa-shield me-2"></i>Security</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  CSRF tokeny pre formuláre, htmlspecialchars escaping, server-side validácie, error handling.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">CSRF</span>
+                  <span class="tag">XSS</span>
+                  <span class="tag">SQLi</span>
+                </div>
+              </article>
+
+              <article class="writeup-card rounded-4 p-4">
+                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                  <h4 class="h6 fw-bold mb-0 text-light">Tagy, vyhľadávanie, kategórie</h4>
+                  <span class="tag"><i class="fa-solid fa-tags me-2"></i>UX</span>
+                </div>
+                <p class="mb-3 text-light-emphasis small">
+                  Filtrovanie podľa tagov, jednoduché fulltext vyhľadávanie, „related posts“.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tag">filter</span>
+                  <span class="tag">search</span>
+                  <span class="tag">taxonomy</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEFINITION OF DONE -->
+    <section class="rounded-5 p-4 p-lg-5 mb-5 shadow-lg photo-grid">
+      <h2 class="fw-bold text-light mb-4">
+        <i class="fa-solid fa-check-double text-info me-2"></i>Definition of Done (aby sa to dalo obhájiť)
+      </h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 bg-dark bg-opacity-50 border border-info h-100">
+            <h3 class="h5 fw-bold text-info mb-3">Minimum (na známku / požiadavky)</h3>
+            <ul class="mb-0 text-light-emphasis">
+              <li>DB schéma + import <code>.sql</code></li>
+              <li>PDO prepared statements (žiadne string query skladanie)</li>
+              <li>Login + sessions + logout</li>
+              <li>CRUD nad entitou článok (min. create + list + edit + delete)</li>
+              <li>Output escaping (XSS) + základné validácie</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 bg-dark bg-opacity-50 border border-primary h-100">
+            <h3 class="h5 fw-bold text-primary mb-3">Plus (bonus – ak bude čas)</h3>
+            <ul class="mb-0 text-light-emphasis">
+              <li>CSRF tokeny pre všetky POST formuláre</li>
+              <li>Flash messages + error pages</li>
+              <li>Tagy/kategórie (M:N) + filter</li>
+              <li>Jednoduché audit logy (napr. „kto upravil článok“)</li>
+              <li>Hardening sessions (cookie flags, regenerate id)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center py-5 rounded-5 bg-gradient bg-info bg-opacity-20 border border-info mb-5 writeups-cta">
+      <div class="display-6 fw-bold text-info mb-3">
+        <i class="fa-solid fa-right-to-bracket me-2"></i>
+        Ďalší krok: prejsť na login
       </div>
       <p class="fs-4 text-light mb-4">
-        Po prihlásení správa článkov + neskôr komentáre a tagy.
+        UI je pripravené — neskôr sa tu napojí reálne prihlasovanie a admin CRUD.
       </p>
-      <a href="login.html" class="btn btn-lg btn-primary px-5 py-3 fs-5 fw-bold">
-        <i class="fa-solid fa-right-to-bracket me-2"></i>Prejsť na login
+      <a href="login.html" class="btn btn-lg btn-info btn-glow px-5 py-3 fs-5 fw-bold">
+        Prejsť na login
       </a>
     </section>
 
@@ -196,4 +350,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/transfo.js"></script>
 </body>
+
 </html>
