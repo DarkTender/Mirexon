@@ -1,108 +1,122 @@
 <!--
-SENTRIX™ README — DIVINE / OPERATOR-GRADE edition
-- GitHub-safe: GFM + HTML + shields + details
-- No illegal guidance. Authorized environments only.
+SENTRIX™ README — BLACK NEON / OPERATOR-GRADE (GitHub-safe) edition
+No scripts. No illegal guidance. Authorized environments only.
 -->
 
-<h1 align="center">SENTRIX™</h1>
-<h3 align="center"><code>Cyber Security Lab • Writeups Forge • X‑Ops Playground</code></h3>
+<div align="center">
 
-<p align="center">
-  <img alt="SENTRIX" src="https://img.shields.io/badge/SENTRIX%E2%84%A2-NEON%20SEC%20LAB-7C3AED?style=for-the-badge&labelColor=05070F" />
-  <img alt="Status"  src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
-  <img alt="ROE"     src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
-  <img alt="Build"   src="https://img.shields.io/badge/build-static%20web-38BDF8?style=for-the-badge&labelColor=05070F" />
-  <img alt="Future"  src="https://img.shields.io/badge/future-PHP8%20%2B%20MySQL-F59E0B?style=for-the-badge&labelColor=05070F" />
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=220&section=header&text=SENTRIX%E2%84%A2&fontSize=64&fontColor=E5E7EB&animation=twinkling&desc=Cyber%20Security%20Lab%20%E2%80%A2%20Writeups%20Forge%20%E2%80%A2%20X%E2%80%91Ops%20Playground&descAlignY=70" alt="SENTRIX banner" />
 
-<p align="center">
-  <b>Security • Event • Network • Threat • Response • Intelligence • X‑Ops</b><br/>
-  <sub>Evidence-first. Reproducible labs. Defensive mindset. Cyber aesthetics with engineering discipline.</sub>
-</p>
+</div>
 
-<hr/>
+<div align="center">
 
-## `0x00 / oath (ROE)`
-> **This project is training-grade.**  
-> I do security only in **legal & authorized** environments: homelab, CTF, controlled training ranges.  
-> No real-target guidance. No harm. No unauthorized access.
+### <code>[ NEON SEC LAB // evidence-first // reproducible playbooks ]</code>
+
+<img alt="status" src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
+<img alt="roe" src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
+<img alt="stack" src="https://img.shields.io/badge/stack-HTML%20%2B%20CSS%20%2B%20JS-38BDF8?style=for-the-badge&labelColor=05070F" />
+<img alt="future" src="https://img.shields.io/badge/future-PHP8%20%2B%20MySQL-F59E0B?style=for-the-badge&labelColor=05070F" />
+<img alt="mindset" src="https://img.shields.io/badge/mindset-BORING%20SECURE-7C3AED?style=for-the-badge&labelColor=05070F" />
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=1800&pause=550&color=7C3AED&center=true&vCenter=true&multiline=true&width=980&height=130&lines=%24+whoami;SENTRIX%E2%84%A2+%E2%86%92+notes+%E2%86%92+artifacts+%E2%86%92+writeups+%E2%86%92+playbooks;ROE%3A+authorized+only+%7C+homelab+%7C+CTF+%7C+training;signal+%3E+noise+%7C+evidence+%3E+vibes+%7C+repeatability+%3E+storytelling" alt="typing" />
+
+</div>
+
+---
+
+## `0x00 / ROE` — rules of engagement (non-negotiable)
+> **Training-grade only.**  
+> Security work only in **legal & authorized** environments: **homelab / CTF / controlled training**.  
+> **No real-target instructions. No harm. No unauthorized access.**
 
 ```text
 ROE:
-- Permission > skill
-- Evidence > vibes
-- Repeatability > storytelling
-- Defense is a feature, not an afterthought
+- Permission  > skill
+- Evidence    > vibes
+- Repeatable  > impressive
+- Defense     > drama
 ```
 
 ---
 
 ## `0x01 / cold open`
 ```text
-┌───────────────────────────────────────────────────────────────────────────┐
-│ SENTRIX™ is a lab where notes become artifacts.                            │
-│ Artifacts become writeups.                                                 │
-│ Writeups become playbooks.                                                 │
-│ Playbooks become discipline.                                               │
-└───────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  SENTRIX™ is a lab. Not a vibe board.                                        │
+│  It turns curiosity into artifacts.                                          │
+│  Artifacts into writeups.                                                    │
+│  Writeups into playbooks.                                                    │
+│  Playbooks into discipline.                                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## `0x02 / what is SENTRIX™`
-**SENTRIX™** je môj **cyber security lab/portfolio web** určený na:
+## `0x02 / definition`
+**SENTRIX™** je môj **cyber security lab/portfolio web**.  
+Minimal UI chaos, maximum operator clarity.
+
+**Built to host:**
 - **Writeups & lab notes** (web / network / monitoring / detections / IR)
 - **Tools & techniques** (workflow, checklisty, snippets, mindset)
-- **Roadmap** (migrácia na **PHP 8 + MySQL**: OOP, CRUD, sessions)
+- **Roadmap** pre prechod na **PHP 8 + MySQL** (OOP, CRUD, sessions)
 
 ---
 
-## `0x03 / repo topology (surface map)`
+## `0x03 / repo surface map`
 | Zone | Path | Purpose |
 |---|---|---|
 | **Entry** | `index.html` | intro, zamerania, quick links |
-| **Writeups** | `writeups.html` | články / lab notes (neskôr DB + CRUD) |
-| **Roadmap** | `roadmap.html` | plán vývoja + milestones |
-| **Tools** | `tools.html` | toolchain + postupy |
+| **Writeups** | `writeups.html` | lab notes / articles (neskôr DB + CRUD) |
+| **Roadmap** | `roadmap.html` | milestones & scope |
+| **Tools** | `tools.html` | toolchain, techniques |
 | **Community** | `community.html` | demo (chat/komentáre + mini hra) |
 | **Login UI** | `login.html` | UI dnes, sessions neskôr |
 | **Start** | `start_web.html` | rozcestník |
-| **Assets** | `css/`, `js/`, `img/` | styling / scripts / media |
+| **Assets** | `css/`, `js/`, `img/` | styling/scripts/media |
 
 ---
 
-## `0x04 / intent (threat model of the project itself)`
+## `0x04 / intent model` (what this repo is / isn't)
 ```diff
-+ Build: cyber-themed UI with sections (Writeups/Tools/Roadmap/Community/Login UI)
-+ Goal : evolve into clean PHP 8 + MySQL app (OOP, CRUD, sessions)
-+ Focus: blue+red craft, always within authorized lab scope
-- Not  : malware repository
-- Not  : real-world intrusion instructions
++ IS: cyber-themed portfolio lab (writeups/tools/roadmap/community/login UI)
++ IS: evolving into PHP8+MySQL app with secure-by-default baseline
++ IS: evidence-first documentation engine
+- IS NOT: malware repo
+- IS NOT: real-world intrusion handbook
+- IS NOT: illegal guidance
 ```
 
 ---
 
-## `0x05 / stack (today → tomorrow)`
-### Today (static)
+## `0x05 / tech stack`
+### `today` (static)
 ```diff
-+ HTML5        :: structure
-+ CSS3         :: dark / neon / cyber aesthetic
-+ JavaScript   :: UI interactions & demo components
++ HTML5
++ CSS3   :: dark / neon aesthetic
++ JS     :: UI interactions + demo components
 ```
 
-### Tomorrow (planned PHP rewrite: “boring secure” baseline)
+### `tomorrow` (planned: PHP rewrite = "boring secure")
 ```diff
-- PHP 8 + MySQL :: planned rewrite
+- PHP 8 + MySQL
 + PDO prepared statements (no raw SQL)
-+ session auth + secure cookie hygiene
++ sessions auth + cookie hygiene
 + CRUD Articles/Writeups + tags/categories
-+ output escaping + CSRF
-+ explicit architecture (db/repo/controllers)
++ escaping-by-default + CSRF
++ explicit architecture: db/ repositories/ controllers/
 ```
 
 ---
 
-## `0x06 / quickstart (run locally)`
+## `0x06 / quickstart`
 ### A) Static (zero friction)
 Open `index.html`.
 
@@ -116,7 +130,7 @@ python -m http.server 8080
 ```
 Open: http://localhost:8080/
 
-### D) XAMPP (recommended for PHP + MySQL phase)
+### D) XAMPP (recommended for PHP phase)
 ```text
 Windows: C:\xampp\htdocs\sentrix\
 Linux:   /opt/lampp/htdocs/sentrix/
@@ -127,57 +141,57 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 ---
 
-## `0x07 / operator doctrine (elite, not illegal)`
-> “Skill is measured by clarity, not chaos.”
+## `0x07 / operator doctrine`
+> “Skill is clarity under pressure.”
 
 ### Principles
-- **Reproducible:** steps + inputs + outputs (replay from zero)
-- **Defensible:** evidence + timestamps + scope (audit-friendly)
-- **Boring-secure:** explicit validation, explicit escaping, explicit trust boundaries
+- **Reproducible** → replay from zero
+- **Defensible** → evidence + timestamps + scope
+- **Boring-secure** → explicit validation, escaping, boundaries
 
 ### Loop
-1. **Observe** baseline  
-2. **Probe** with controlled input  
-3. **Record** evidence (logs/screenshots/timeline)  
-4. **Explain** impact + root cause  
-5. **Mitigate** (fix + harden)  
-6. **Replay** (prove it’s repeatable)
+1. Observe baseline  
+2. Probe with controlled input  
+3. Record evidence  
+4. Explain impact + root cause  
+5. Mitigate + harden  
+6. Replay (prove it)
 
 ---
 
-## `0x08 / writeups (notes → artifacts → playbooks)`
+## `0x08 / writeup forge`
 <details>
 <summary><b>Writeup skeleton (operator-grade)</b></summary>
 
 ```markdown
 # Title (specific, measurable)
-## Scope / ROE (authorized only)
-## Environment (versions, topology, assumptions)
+## Scope / ROE
+## Environment (versions, topology)
 ## Goal / Hypothesis
-## Procedure (reproducible steps)
-## Evidence (logs, screenshots, timestamps)
+## Procedure (repro steps)
+## Evidence (logs/screenshots/timestamps)
 ## Findings (impact + root cause)
 ## Mitigation (fix + hardening)
-## Detection ideas (signals, rules, logging)
-## Lessons learned (what I’d do differently)
+## Detection ideas (signals/rules/logging)
+## Lessons learned
 ```
 </details>
 
 <details>
-<summary><b>Evidence-first checklist</b></summary>
+<summary><b>Evidence checklist</b></summary>
 
 ```text
-[ ] Do I have timestamps?
-[ ] Do I have exact inputs that triggered behavior?
-[ ] Do I have exact outputs/logs proving it?
-[ ] Is scope explicitly authorized?
-[ ] Can someone else reproduce from scratch?
+[ ] Timestamps present
+[ ] Exact inputs captured
+[ ] Exact outputs/logs captured
+[ ] Scope authorized + stated
+[ ] Reproducible by third party
 ```
 </details>
 
 ---
 
-## `0x09 / roadmap (extreme but realistic)`
+## `0x09 / roadmap`
 ```text
 [PHASE 1] Content → data model
   - Articles/Writeups entity
@@ -189,37 +203,41 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
   - role separation
   - CSRF + secure cookies + basic rate limiting
 
-[PHASE 3] Hardening + operational hygiene
+[PHASE 3] Hardening + hygiene
   - input validation layer
   - consistent output escaping
   - audit trail for admin actions
-  - predictable error handling (no info leaks)
+  - predictable errors (no info leaks)
 ```
 
 ---
 
-## `0x0A / security stance (non-negotiables)`
+## `0x0A / security stance`
 - **No secrets** in repo (keys/tokens/passwords)
-- **Explicit trust boundaries** (user-controlled vs internal)
-- **Least privilege** mindset (future DB roles)
-- **Audit-friendly** changes (clean commits, clear diffs)
-- **No harm / no illegal guidance** — ever
+- **Explicit trust boundaries**
+- **Least privilege** (future DB roles)
+- **Audit-friendly** diffs
+- **No harm / no illegal guidance**
 
 ---
 
 ## `0x0B / contributing`
-Máš nápad na lab scenár / writeup / tools sekciu / UI vylepšenie?
+Nápady na lab scenáre, writeups, tools alebo UI?
 - otvor issue / pošli návrh
-- najviac cením **konkrétne** feedbacky: *čo, kde, prečo, ako to overiť*
+- ideálne: *čo, kde, prečo, ako to overiť*
 
 ---
 
 ## `0x0C / license`
 Ak nie je uvedené inak: **All rights reserved** (default GitHub).  
-Ak chceš open-source: pridaj `MIT` alebo `Apache-2.0`.
+Ak chceš open-source: `MIT` alebo `Apache-2.0`.
 
 ---
 
-<p align="center">
-  <sub>© 2026 SENTRIX™ • built by <b>DarkTender</b> • <code>stay legal</code></sub>
-</p>
+<div align="center">
+
+<sub>© 2026 SENTRIX™ • built by <b>DarkTender</b> • <code>stay legal</code></sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=140&section=footer&animation=twinkling" alt="footer" />
+
+</div>
