@@ -60,9 +60,7 @@ function providerAnim(provider) {
     e.preventDefault();
     alert("Link na obnovenie hesla bol odoslaný.");
   });
-</script>
-</body>
-<script>
+
 function redirectBackIfNotLoggedIn() {
 const isLoggedIn = false; 
 if (!isLoggedIn) {
