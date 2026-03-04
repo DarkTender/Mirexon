@@ -1,17 +1,41 @@
 <!--
-SENTRIX™ README — BLACK NEON / OPERATOR-GRADE (GitHub-safe) edition
-No scripts. No illegal guidance. Authorized environments only.
+SENTRIX™ README — MOTION / NEON / OPERATOR-GRADE (GitHub-safe)
+Rules:
+- GitHub README cannot run JS. "Animation" = GIF/SVG/remote-rendered images only.
+- Strictly authorized/ethical. No illegal guidance.
 -->
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=220&section=header&text=SENTRIX%E2%84%A2&fontSize=64&fontColor=E5E7EB&animation=twinkling&desc=Cyber%20Security%20Lab%20%E2%80%A2%20Writeups%20Forge%20%E2%80%A2%20X%E2%80%91Ops%20Playground&descAlignY=70" alt="SENTRIX banner" />
+<!-- BIG HACKER BANNER (animated render) -->
+<img
+  src="https://capsule-render.vercel.app/api?type=venom&color=0:05070F,20:7C3AED,55:22C55E,85:F43F5E,100:05070F&height=300&section=header&text=SENTRIX%E2%84%A2&fontSize=82&fontColor=E5E7EB&stroke=7C3AED&strokeWidth=2&animation=twinkling&desc=NEON%20SEC%20LAB%20%E2%80%A2%20WRITEUPS%20FORGE%20%E2%80%A2%20X%E2%80%91OPS%20PLAYGROUND&descAlignY=72"
+  alt="SENTRIX big hacker banner"
+/>
 
 </div>
 
 <div align="center">
 
-### <code>[ NEON SEC LAB // evidence-first // reproducible playbooks ]</code>
+<!-- Animated typing line -->
+<img
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=1600&pause=450&color=7C3AED&center=true&vCenter=true&multiline=true&width=1100&height=150&lines=%5B+SENTRIX%E2%84%A2+%5D+NEON+SEC+LAB;notes+%E2%86%92+artifacts+%E2%86%92+writeups+%E2%86%92+playbooks;authorized+only+%7C+homelab+%7C+CTF+%7C+training"
+  alt="typing"
+/>
+
+<!-- Animated “matrix-ish” divider (GIF) -->
+<br/>
+<img
+  src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif"
+  width="780"
+  alt="matrix divider"
+/>
+
+</div>
+
+---
+
+<div align="center">
 
 <img alt="status" src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
 <img alt="roe" src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
@@ -21,13 +45,10 @@ No scripts. No illegal guidance. Authorized environments only.
 
 </div>
 
----
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=1800&pause=550&color=7C3AED&center=true&vCenter=true&multiline=true&width=980&height=130&lines=%24+whoami;SENTRIX%E2%84%A2+%E2%86%92+notes+%E2%86%92+artifacts+%E2%86%92+writeups+%E2%86%92+playbooks;ROE%3A+authorized+only+%7C+homelab+%7C+CTF+%7C+training;signal+%3E+noise+%7C+evidence+%3E+vibes+%7C+repeatability+%3E+storytelling" alt="typing" />
-
-</div>
+<p align="center">
+  <b>Security • Event • Network • Threat • Response • Intelligence • X‑Ops</b><br/>
+  <sub>Evidence-first • Reproducible labs • Defensive mindset • Cyber aesthetics with engineering discipline</sub>
+</p>
 
 ---
 
@@ -221,23 +242,23 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 ---
 
-## `0x0B / contributing`
-Nápady na lab scenáre, writeups, tools alebo UI?
-- otvor issue / pošli návrh
-- ideálne: *čo, kde, prečo, ako to overiť*
-
----
-
-## `0x0C / license`
-Ak nie je uvedené inak: **All rights reserved** (default GitHub).  
-Ak chceš open-source: `MIT` alebo `Apache-2.0`.
-
----
-
 <div align="center">
 
+<!-- Another animated divider (GIF) -->
+<img
+  src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif"
+  width="780"
+  alt="neon divider"
+/>
+
+<br/>
 <sub>© 2026 SENTRIX™ • built by <b>DarkTender</b> • <code>stay legal</code></sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=140&section=footer&animation=twinkling" alt="footer" />
+<!-- Animated footer banner -->
+<br/>
+<img
+  src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=160&section=footer&animation=twinkling"
+  alt="footer"
+/>
 
 </div>
