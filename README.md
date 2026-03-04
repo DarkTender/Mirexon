@@ -1,96 +1,108 @@
 <!--
-SENTRIX™ README — extreme edition
-Notes:
-- Pure GitHub-flavored Markdown + shields + details blocks + ASCII + diff blocks.
-- No illegal instructions; strictly authorized environments.
+SENTRIX™ README — DIVINE / OPERATOR-GRADE edition
+- GitHub-safe: GFM + HTML + shields + details
+- No illegal guidance. Authorized environments only.
 -->
 
 <h1 align="center">SENTRIX™</h1>
 <h3 align="center"><code>Cyber Security Lab • Writeups Forge • X‑Ops Playground</code></h3>
 
 <p align="center">
-  <img alt="SENTRIX" src="https://img.shields.io/badge/SENTRIX%E2%84%A2-SEC%20LAB-7C3AED?style=for-the-badge&labelColor=0B0F19" />
-  <img alt="Status" src="https://img.shields.io/badge/status-active%20build-22C55E?style=for-the-badge&labelColor=0B0F19" />
-  <img alt="ROE" src="https://img.shields.io/badge/ROE-legal%20only-F43F5E?style=for-the-badge&labelColor=0B0F19" />
-  <img alt="Stack" src="https://img.shields.io/badge/stack-HTML%20%2B%20CSS%20%2B%20JS-38BDF8?style=for-the-badge&labelColor=0B0F19" />
+  <img alt="SENTRIX" src="https://img.shields.io/badge/SENTRIX%E2%84%A2-NEON%20SEC%20LAB-7C3AED?style=for-the-badge&labelColor=05070F" />
+  <img alt="Status"  src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
+  <img alt="ROE"     src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
+  <img alt="Build"   src="https://img.shields.io/badge/build-static%20web-38BDF8?style=for-the-badge&labelColor=05070F" />
+  <img alt="Future"  src="https://img.shields.io/badge/future-PHP8%20%2B%20MySQL-F59E0B?style=for-the-badge&labelColor=05070F" />
 </p>
 
 <p align="center">
   <b>Security • Event • Network • Threat • Response • Intelligence • X‑Ops</b><br/>
-  <sub>Training-grade lab. Evidence-first writeups. Reproducible notes. Defensive mindset.</sub>
+  <sub>Evidence-first. Reproducible labs. Defensive mindset. Cyber aesthetics with engineering discipline.</sub>
 </p>
 
----
+<hr/>
 
-## `0x00 / banner`
+## `0x00 / oath (ROE)`
+> **This project is training-grade.**  
+> I do security only in **legal & authorized** environments: homelab, CTF, controlled training ranges.  
+> No real-target guidance. No harm. No unauthorized access.
+
 ```text
-███████╗███████╗███╗   ██╗████████╗██████╗ ██╗██╗  ██╗
-██╔════╝██╔════╝████╗  ██║╚══██╔══╝██╔══██╗██║╚██╗██╔╝
-███████╗█████╗  ██╔██╗ ██║   ██║   ██████╔╝██║ ╚███╔╝ 
-╚════██║██╔══╝  ██║╚██╗██║   ██║   ██╔══██╗██║ ██╔██╗ 
-███████║███████╗██║ ╚████║   ██║   ██║  ██║██║██╔╝ ██╗
-╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝
+ROE:
+- Permission > skill
+- Evidence > vibes
+- Repeatability > storytelling
+- Defense is a feature, not an afterthought
 ```
 
 ---
 
-## `0x01 / whoami`
-**SENTRIX™** je môj **cyber security lab/portfolio web**: z poznámok robím **playbooky**, z playbookov robím **writeups** a tie držím v režime:
-
-- **reproducible** (kroky + vstupy + výstupy)
-- **defensible** (evidence, screenshots/logs, timeline)
-- **boring-secure** (žiadne risky skratky)
-
-> **ROE / Ethics:** iba **autorizované** prostredia (homelab, CTF, training).  
-> Žiadne návody na nelegálne použitie. Žiadne “targeting real systems”.
+## `0x01 / cold open`
+```text
+┌───────────────────────────────────────────────────────────────────────────┐
+│ SENTRIX™ is a lab where notes become artifacts.                            │
+│ Artifacts become writeups.                                                 │
+│ Writeups become playbooks.                                                 │
+│ Playbooks become discipline.                                               │
+└───────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## `0x02 / threat model (project intent)`
+## `0x02 / what is SENTRIX™`
+**SENTRIX™** je môj **cyber security lab/portfolio web** určený na:
+- **Writeups & lab notes** (web / network / monitoring / detections / IR)
+- **Tools & techniques** (workflow, checklisty, snippets, mindset)
+- **Roadmap** (migrácia na **PHP 8 + MySQL**: OOP, CRUD, sessions)
+
+---
+
+## `0x03 / repo topology (surface map)`
+| Zone | Path | Purpose |
+|---|---|---|
+| **Entry** | `index.html` | intro, zamerania, quick links |
+| **Writeups** | `writeups.html` | články / lab notes (neskôr DB + CRUD) |
+| **Roadmap** | `roadmap.html` | plán vývoja + milestones |
+| **Tools** | `tools.html` | toolchain + postupy |
+| **Community** | `community.html` | demo (chat/komentáre + mini hra) |
+| **Login UI** | `login.html` | UI dnes, sessions neskôr |
+| **Start** | `start_web.html` | rozcestník |
+| **Assets** | `css/`, `js/`, `img/` | styling / scripts / media |
+
+---
+
+## `0x04 / intent (threat model of the project itself)`
 ```diff
-+ Build: cyber-themed UI + sections (writeups/tools/roadmap/community/login UI)
-+ Goal: evolve into PHP 8 + MySQL app (OOP, CRUD, sessions)
-+ Focus: blue+red craft, but always in legal lab scope
-- Not: a malware repo
-- Not: an intrusion handbook for real targets
++ Build: cyber-themed UI with sections (Writeups/Tools/Roadmap/Community/Login UI)
++ Goal : evolve into clean PHP 8 + MySQL app (OOP, CRUD, sessions)
++ Focus: blue+red craft, always within authorized lab scope
+- Not  : malware repository
+- Not  : real-world intrusion instructions
 ```
 
 ---
 
-## `0x03 / stack`
+## `0x05 / stack (today → tomorrow)`
+### Today (static)
 ```diff
 + HTML5        :: structure
-+ CSS3         :: dark/neon aesthetic
-+ JavaScript   :: UI interactions & demos
-- PHP 8 + MySQL:: planned rewrite (secure-by-default)
++ CSS3         :: dark / neon / cyber aesthetic
++ JavaScript   :: UI interactions & demo components
 ```
 
-### Planned PHP rewrite — “boring secure” baseline
-- `PDO` prepared statements (**no string-built SQL**)
-- session auth with secure cookie hygiene
-- CRUD `Articles/Writeups` + tags/categories
-- output escaping by default + CSRF
-- separation: `db/` `repositories/` `controllers/` (explicit flows)
+### Tomorrow (planned PHP rewrite: “boring secure” baseline)
+```diff
+- PHP 8 + MySQL :: planned rewrite
++ PDO prepared statements (no raw SQL)
++ session auth + secure cookie hygiene
++ CRUD Articles/Writeups + tags/categories
++ output escaping + CSRF
++ explicit architecture (db/repo/controllers)
+```
 
 ---
 
-## `0x04 / repo topology`
-> Minimal surface, maximum clarity.
-
-| Area | Path | What it is |
-|---|---|---|
-| Home | `index.html` | entrypoint, focus, quick links |
-| Writeups | `writeups.html` | lab notes / articles (future DB) |
-| Roadmap | `roadmap.html` | milestones & scope |
-| Tools | `tools.html` | toolchain + techniques |
-| Community | `community.html` | demo components (chat/comments + mini game) |
-| Login UI | `login.html` | UI now, sessions later |
-| Start | `start_web.html` | quick entry |
-| Assets | `css/` `js/` `img/` | styling/scripts/media |
-
----
-
-## `0x05 / quickstart`
+## `0x06 / quickstart (run locally)`
 ### A) Static (zero friction)
 Open `index.html`.
 
@@ -104,7 +116,7 @@ python -m http.server 8080
 ```
 Open: http://localhost:8080/
 
-### D) XAMPP (recommended for upcoming PHP + MySQL)
+### D) XAMPP (recommended for PHP + MySQL phase)
 ```text
 Windows: C:\xampp\htdocs\sentrix\
 Linux:   /opt/lampp/htdocs/sentrix/
@@ -115,38 +127,57 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 ---
 
-## `0x06 / operator workflow`
-> “Signal over noise. Evidence over vibes.”
+## `0x07 / operator doctrine (elite, not illegal)`
+> “Skill is measured by clarity, not chaos.”
 
-1. **Observe** (what is normal?)
-2. **Probe** (what changes under controlled input?)
-3. **Record** (evidence, logs, timestamps)
-4. **Explain** (root cause + impact)
-5. **Mitigate** (fix + harden)
-6. **Replay** (can I reproduce it?)
+### Principles
+- **Reproducible:** steps + inputs + outputs (replay from zero)
+- **Defensible:** evidence + timestamps + scope (audit-friendly)
+- **Boring-secure:** explicit validation, explicit escaping, explicit trust boundaries
+
+### Loop
+1. **Observe** baseline  
+2. **Probe** with controlled input  
+3. **Record** evidence (logs/screenshots/timeline)  
+4. **Explain** impact + root cause  
+5. **Mitigate** (fix + harden)  
+6. **Replay** (prove it’s repeatable)
 
 ---
 
-## `0x07 / writeup standard (template mindset)`
+## `0x08 / writeups (notes → artifacts → playbooks)`
 <details>
-<summary><b>Click: Writeup skeleton (what I aim for)</b></summary>
+<summary><b>Writeup skeleton (operator-grade)</b></summary>
 
 ```markdown
-# Title — short, specific
-## Scope / ROE
-## Environment (versions, topology)
-## Hypothesis / Goal
-## Steps (reproducible)
-## Evidence (logs/screenshots)
-## Findings (what matters)
-## Fix / Mitigation
-## Lessons learned / Detection ideas
+# Title (specific, measurable)
+## Scope / ROE (authorized only)
+## Environment (versions, topology, assumptions)
+## Goal / Hypothesis
+## Procedure (reproducible steps)
+## Evidence (logs, screenshots, timestamps)
+## Findings (impact + root cause)
+## Mitigation (fix + hardening)
+## Detection ideas (signals, rules, logging)
+## Lessons learned (what I’d do differently)
+```
+</details>
+
+<details>
+<summary><b>Evidence-first checklist</b></summary>
+
+```text
+[ ] Do I have timestamps?
+[ ] Do I have exact inputs that triggered behavior?
+[ ] Do I have exact outputs/logs proving it?
+[ ] Is scope explicitly authorized?
+[ ] Can someone else reproduce from scratch?
 ```
 </details>
 
 ---
 
-## `0x08 / roadmap (next phases)`
+## `0x09 / roadmap (extreme but realistic)`
 ```text
 [PHASE 1] Content → data model
   - Articles/Writeups entity
@@ -167,26 +198,23 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 ---
 
-## `0x09 / security stance`
-- **No secrets** committed (keys/tokens/passwords)
-- **Explicit trust boundaries** (what is user-controlled vs internal)
-- **Least privilege** mindset (future DB users/roles)
+## `0x0A / security stance (non-negotiables)`
+- **No secrets** in repo (keys/tokens/passwords)
+- **Explicit trust boundaries** (user-controlled vs internal)
+- **Least privilege** mindset (future DB roles)
 - **Audit-friendly** changes (clean commits, clear diffs)
+- **No harm / no illegal guidance** — ever
 
 ---
 
-## `0x0A / contributing`
-Chceš pridať:
-- lab scenár,
-- nápad na sekciu Tools,
-- alebo vylepšiť UI?
-
-Otvor issue / pošli návrh.  
-SENTRIX™ je “lab-first”, takže oceňujem **konkrétne** feedbacky (čo, kde, prečo).
+## `0x0B / contributing`
+Máš nápad na lab scenár / writeup / tools sekciu / UI vylepšenie?
+- otvor issue / pošli návrh
+- najviac cením **konkrétne** feedbacky: *čo, kde, prečo, ako to overiť*
 
 ---
 
-## `0x0B / license`
+## `0x0C / license`
 Ak nie je uvedené inak: **All rights reserved** (default GitHub).  
 Ak chceš open-source: pridaj `MIT` alebo `Apache-2.0`.
 
