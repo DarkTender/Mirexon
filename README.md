@@ -96,13 +96,13 @@ notes → artifacts → writeups → playbooks
 ## `0x02 / repo map`
 | Zone | Path | Purpose |
 |---|---|---|
+| Start | `start_web.html` | strat website |
 | Entry | `index.html` | intro, quick links |
 | Writeups | `writeups.html` | lab notes / articles (future DB CRUD) |
 | Roadmap | `roadmap.html` | milestones & scope |
 | Tools | `tools.html` | toolchain, techniques |
 | Community | `community.html` | demo (chat/komentáre + mini hra) |
 | Login UI | `login.html` | UI now, sessions later |
-| Start | `start_web.html` | jump page |
 | Assets | `css/`, `js/`, `img/` | styling/scripts/media |
 
 ---
