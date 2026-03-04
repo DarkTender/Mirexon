@@ -1,3 +1,8 @@
+<?php
+declare(strict_types=1);
+
+// session_start();
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -19,7 +24,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-futuristic sticky-top mb-2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-shield-halved"></i>SENTRIX</a>
+      <a class="navbar-brand" href="index.php"><i class="fa-solid fa-shield-halved"></i>SENTRIX</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFuturistic"
         aria-controls="navbarFuturistic" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,15 +33,15 @@
 
       <div class="collapse navbar-collapse" id="navbarFuturistic">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Domov</a></li>
-          <li class="nav-item"><a class="nav-link" href="writeups.html">Writeups</a></li>
-          <li class="nav-item"><a class="nav-link" href="roadmap.html">Roadmap</a></li>
-          <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
-          <li class="nav-item"><a class="nav-link" href="community.html">Komunita</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.php">Domov</a></li>
+          <li class="nav-item"><a class="nav-link" href="writeups.php">Writeups</a></li>
+          <li class="nav-item"><a class="nav-link" href="roadmap.php">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.php">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="community.php">Komunita</a></li>
         </ul>
 
         <div class="d-flex ms-lg-3 mt-3 mt-lg-0 gap-2">
-          <a href="login.html" class="btn">Login</a>
+          <a href="login.php" class="btn">Login</a>
         </div>
       </div>
     </div>
