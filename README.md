@@ -1,34 +1,31 @@
 <!--
-SENTRIX™ README — MOTION / NEON / OPERATOR-GRADE (GitHub-safe)
-Rules:
-- GitHub README cannot run JS. "Animation" = GIF/SVG/remote-rendered images only.
-- Strictly authorized/ethical. No illegal guidance.
+SENTRIX™ README — UNDERGROUND / CYBER / OPERATOR-GRADE (GitHub-safe)
+- No JS in GitHub README → animations are GIF/SVG/images only.
+- Dark / underground palette only (no rainbows, no cute).
+- Authorized environments only. No illegal guidance.
 -->
 
 <div align="center">
 
-<!-- BIG HACKER BANNER (animated render) -->
+<!-- BIG UNDERGROUND BANNER (dark neon, no rainbow) -->
 <img
-  src="https://capsule-render.vercel.app/api?type=venom&color=0:05070F,20:7C3AED,55:22C55E,85:F43F5E,100:05070F&height=300&section=header&text=SENTRIX%E2%84%A2&fontSize=82&fontColor=E5E7EB&stroke=7C3AED&strokeWidth=2&animation=twinkling&desc=NEON%20SEC%20LAB%20%E2%80%A2%20WRITEUPS%20FORGE%20%E2%80%A2%20X%E2%80%91OPS%20PLAYGROUND&descAlignY=72"
-  alt="SENTRIX big hacker banner"
+  src="https://capsule-render.vercel.app/api?type=venom&color=0:05070F,35:0B1020,70:1A0B2E,100:05070F&height=320&section=header&text=SENTRIX%E2%84%A2&fontSize=86&fontColor=E5E7EB&stroke=7C3AED&strokeWidth=2&animation=twinkling&desc=UNDERGROUND%20CYBER%20LAB%20%E2%80%A2%20WRITEUPS%20FORGE%20%E2%80%A2%20X%E2%80%91OPS&descAlignY=72"
+  alt="SENTRIX underground banner"
 />
 
-</div>
-
-<div align="center">
-
-<!-- Animated typing line -->
+<!-- Glitch typing line (purple/green only) -->
+<br/>
 <img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=1600&pause=450&color=7C3AED&center=true&vCenter=true&multiline=true&width=1100&height=150&lines=%5B+SENTRIX%E2%84%A2+%5D+NEON+SEC+LAB;notes+%E2%86%92+artifacts+%E2%86%92+writeups+%E2%86%92+playbooks;authorized+only+%7C+homelab+%7C+CTF+%7C+training"
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=1400&pause=450&color=7C3AED&center=true&vCenter=true&multiline=true&width=1100&height=140&lines=%5B+SENTRIX%E2%84%A2+%5D+underground+cyber+lab;notes+%E2%86%92+artifacts+%E2%86%92+writeups+%E2%86%92+playbooks;ROE%3A+authorized+only+%7C+homelab+%7C+CTF+%7C+training"
   alt="typing"
 />
 
-<!-- Animated “matrix-ish” divider (GIF) -->
+<!-- DARK "DATA STREAM" divider (subtle) -->
 <br/>
 <img
-  src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif"
-  width="780"
-  alt="matrix divider"
+  src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
+  width="860"
+  alt="data stream divider"
 />
 
 </div>
@@ -37,25 +34,25 @@ Rules:
 
 <div align="center">
 
-<img alt="status" src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
-<img alt="roe" src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
-<img alt="stack" src="https://img.shields.io/badge/stack-HTML%20%2B%20CSS%20%2B%20JS-38BDF8?style=for-the-badge&labelColor=05070F" />
-<img alt="future" src="https://img.shields.io/badge/future-PHP8%20%2B%20MySQL-F59E0B?style=for-the-badge&labelColor=05070F" />
-<img alt="mindset" src="https://img.shields.io/badge/mindset-BORING%20SECURE-7C3AED?style=for-the-badge&labelColor=05070F" />
+<img alt="status"  src="https://img.shields.io/badge/status-OPERATIONAL-22C55E?style=for-the-badge&labelColor=05070F" />
+<img alt="roe"     src="https://img.shields.io/badge/ROE-AUTHORIZED%20ONLY-F43F5E?style=for-the-badge&labelColor=05070F" />
+<img alt="stack"   src="https://img.shields.io/badge/stack-HTML%20%2B%20CSS%20%2B%20JS-111827?style=for-the-badge&labelColor=05070F" />
+<img alt="future"  src="https://img.shields.io/badge/future-PHP8%20%2B%20MySQL-0B1020?style=for-the-badge&labelColor=05070F" />
+<img alt="mode"    src="https://img.shields.io/badge/mode-UNDERGROUND-7C3AED?style=for-the-badge&labelColor=05070F" />
 
 </div>
 
 <p align="center">
   <b>Security • Event • Network • Threat • Response • Intelligence • X‑Ops</b><br/>
-  <sub>Evidence-first • Reproducible labs • Defensive mindset • Cyber aesthetics with engineering discipline</sub>
+  <sub>Evidence-first • Reproducible labs • Operator clarity • Dark cyber aesthetics</sub>
 </p>
 
 ---
 
-## `0x00 / ROE` — rules of engagement (non-negotiable)
+## `0x00 / ROE` — rules of engagement
 > **Training-grade only.**  
-> Security work only in **legal & authorized** environments: **homelab / CTF / controlled training**.  
-> **No real-target instructions. No harm. No unauthorized access.**
+> Security work only in **legal & authorized** environments (**homelab / CTF / controlled training**).  
+> **No real-target guidance. No harm. No unauthorized access.**
 
 ```text
 ROE:
@@ -70,19 +67,19 @@ ROE:
 ## `0x01 / cold open`
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  SENTRIX™ is a lab. Not a vibe board.                                        │
-│  It turns curiosity into artifacts.                                          │
-│  Artifacts into writeups.                                                    │
-│  Writeups into playbooks.                                                    │
-│  Playbooks into discipline.                                                  │
+│  SENTRIX™ is a lab.                                                        │
+│  Underground aesthetic — professional discipline.                           │
+│                                                                             │
+│  notes  →  artifacts  →  writeups  →  playbooks                              │
+│                                                                             │
+│  If it’s not repeatable, it’s not real.                                     │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## `0x02 / definition`
-**SENTRIX™** je môj **cyber security lab/portfolio web**.  
-Minimal UI chaos, maximum operator clarity.
+**SENTRIX™** je môj **cyber security lab/portfolio web**.
 
 **Built to host:**
 - **Writeups & lab notes** (web / network / monitoring / detections / IR)
@@ -105,7 +102,7 @@ Minimal UI chaos, maximum operator clarity.
 
 ---
 
-## `0x04 / intent model` (what this repo is / isn't)
+## `0x04 / intent model`
 ```diff
 + IS: cyber-themed portfolio lab (writeups/tools/roadmap/community/login UI)
 + IS: evolving into PHP8+MySQL app with secure-by-default baseline
@@ -118,14 +115,14 @@ Minimal UI chaos, maximum operator clarity.
 ---
 
 ## `0x05 / tech stack`
-### `today` (static)
+### `today`
 ```diff
 + HTML5
 + CSS3   :: dark / neon aesthetic
 + JS     :: UI interactions + demo components
 ```
 
-### `tomorrow` (planned: PHP rewrite = "boring secure")
+### `tomorrow` (planned: PHP rewrite = “boring secure”)
 ```diff
 - PHP 8 + MySQL
 + PDO prepared statements (no raw SQL)
@@ -138,7 +135,7 @@ Minimal UI chaos, maximum operator clarity.
 ---
 
 ## `0x06 / quickstart`
-### A) Static (zero friction)
+### A) Static
 Open `index.html`.
 
 ### B) VS Code Live Server
@@ -151,7 +148,7 @@ python -m http.server 8080
 ```
 Open: http://localhost:8080/
 
-### D) XAMPP (recommended for PHP phase)
+### D) XAMPP (for PHP phase)
 ```text
 Windows: C:\xampp\htdocs\sentrix\
 Linux:   /opt/lampp/htdocs/sentrix/
@@ -163,7 +160,7 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 ---
 
 ## `0x07 / operator doctrine`
-> “Skill is clarity under pressure.”
+> “Skill is measured by clarity under pressure.”
 
 ### Principles
 - **Reproducible** → replay from zero
@@ -172,7 +169,7 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 ### Loop
 1. Observe baseline  
-2. Probe with controlled input  
+2. Probe controlled input  
 3. Record evidence  
 4. Explain impact + root cause  
 5. Mitigate + harden  
@@ -234,9 +231,9 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 ---
 
 ## `0x0A / security stance`
-- **No secrets** in repo (keys/tokens/passwords)
+- **No secrets** in repo
 - **Explicit trust boundaries**
-- **Least privilege** (future DB roles)
+- **Least privilege**
 - **Audit-friendly** diffs
 - **No harm / no illegal guidance**
 
@@ -244,21 +241,12 @@ macOS:   /Applications/XAMPP/htdocs/sentrix/
 
 <div align="center">
 
-<!-- Another animated divider (GIF) -->
+<!-- Dark footer motion -->
 <img
-  src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif"
-  width="780"
-  alt="neon divider"
-/>
-
-<br/>
-<sub>© 2026 SENTRIX™ • built by <b>DarkTender</b> • <code>stay legal</code></sub>
-
-<!-- Animated footer banner -->
-<br/>
-<img
-  src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,30:7C3AED,60:22C55E,100:F43F5E&height=160&section=footer&animation=twinkling"
+  src="https://capsule-render.vercel.app/api?type=waving&color=0:05070F,40:0B1020,70:1A0B2E,100:05070F&height=170&section=footer&animation=twinkling"
   alt="footer"
 />
+
+<sub>© 2026 SENTRIX™ • built by <b>DarkTender</b> • <code>stay legal</code></sub>
 
 </div>
