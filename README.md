@@ -1,24 +1,22 @@
 <!--
 SENTRIX™ README — MATRIX TERMINAL / UNDERGROUND edition (GitHub-safe)
-Important limitations (GitHub README):
-- No custom CSS/JS execution, no true animated "full background".
-- Only safe way: animated images (SVG/GIF) embedded via <img>.
-You asked: "len matrix" + terminal red/green. This README uses ONLY matrix/terminal-style animated renders.
+Upgrades requested:
+- Add more "animated letters" + matrix cyber-ops builder tricks BETWEEN sections
+Constraints:
+- GitHub README cannot run JS/CSS → only animated images (SVG/GIF) via <img>.
+- Keep red/green terminal style, underground theme, no rainbow/cute.
+- Authorized environments only. No illegal guidance.
 -->
 
 <div align="center">
 
-<!-- MATRIX BACKDROP (animated render via hosted SVG) -->
+<!-- MATRIX HEADER (animated letters) -->
 <img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=1200&pause=350&color=22C55E&center=true&vCenter=true&multiline=true&width=1100&height=170&lines=0101010001110001010101010010101;MATRIX%20MODE%20%2F%2F%20UNDERGROUND%20CYBER%20LAB;SENTRIX%E2%84%A2%20%E2%86%92%20WRITEUPS%20FORGE%20%E2%86%92%20X%E2%80%91OPS%20PLAYGROUND;AUTHORIZED%20ONLY%20%7C%20HOMELAB%20%7C%20CTF%20%7C%20TRAINING"
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=1150&pause=350&color=22C55E&center=true&vCenter=true&multiline=true&width=1100&height=175&lines=0101010001110001010101010010101;MATRIX%20MODE%20%2F%2F%20UNDERGROUND%20CYBER%20LAB;SENTRIX%E2%84%A2%20%E2%86%92%20WRITEUPS%20FORGE%20%E2%86%92%20X%E2%80%91OPS%20PLAYGROUND;AUTHORIZED%20ONLY%20%7C%20HOMELAB%20%7C%20CTF%20%7C%20TRAINING"
   alt="matrix terminal header"
 />
 
-</div>
-
-<div align="center">
-
-<!-- HARD TERMINAL BANNER (dark + red/green) -->
+<!-- HARD TERMINAL BANNER -->
 <img
   src="https://capsule-render.vercel.app/api?type=rect&color=0:05070F,100:05070F&height=250&section=header&text=SENTRIX%E2%84%A2&fontSize=80&fontColor=22C55E&stroke=EF4444&strokeWidth=2&animation=fadeIn&desc=MATRIX%20TERMINAL%20%E2%80%A2%20EVIDENCE-FIRST%20%E2%80%A2%20REPRODUCIBLE%20PLAYBOOKS&descAlignY=72"
   alt="SENTRIX terminal banner"
@@ -42,6 +40,14 @@ You asked: "len matrix" + terminal red/green. This README uses ONLY matrix/termi
 
 ---
 
+<!-- MATRIX SECTION DIVIDER (animated letters) -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=800&pause=1200&color=EF4444&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20ROE%20/%20RULES%20OF%20ENGAGEMENT%20%5D%20%3A%3A%20LOCKED%20---"
+    alt="divider roe"
+  />
+</div>
+
 ## `0x00 / ROE` — rules of engagement (NON‑NEGOTIABLE)
 > **Training-grade only.**  
 > Security work only in **legal & authorized** environments: **homelab / CTF / controlled training**.  
@@ -57,6 +63,14 @@ ROE:
 
 ---
 
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=900&pause=1100&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20BOOT%20/%20CONSOLE%20%5D%20%3A%3A%20INITIALIZING%20---"
+    alt="divider boot"
+  />
+</div>
+
 ## `0x01 / boot`
 ```text
 $ whoami
@@ -70,6 +84,14 @@ notes → artifacts → writeups → playbooks
 ```
 
 ---
+
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=850&pause=1150&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20REPO%20MAP%20%5D%20%3A%3A%20ENUMERATING%20SURFACE%20---"
+    alt="divider repomap"
+  />
+</div>
 
 ## `0x02 / repo map`
 | Zone | Path | Purpose |
@@ -85,6 +107,14 @@ notes → artifacts → writeups → playbooks
 
 ---
 
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=900&pause=1100&color=EF4444&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20INTENT%20MODEL%20%5D%20%3A%3A%20SCOPE%20GUARDED%20---"
+    alt="divider intent"
+  />
+</div>
+
 ## `0x03 / intent model`
 ```diff
 + IS: cyber-themed portfolio lab (writeups/tools/roadmap/community/login UI)
@@ -96,6 +126,14 @@ notes → artifacts → writeups → playbooks
 ```
 
 ---
+
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=880&pause=1200&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20STACK%20%5D%20%3A%3A%20LOADING%20MODULES%20---"
+    alt="divider stack"
+  />
+</div>
 
 ## `0x04 / stack`
 ### `today` (static)
@@ -117,6 +155,14 @@ notes → artifacts → writeups → playbooks
 
 ---
 
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=850&pause=1200&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20RUN%20%5D%20%3A%3A%20SPAWNING%20LOCAL%20INSTANCE%20---"
+    alt="divider run"
+  />
+</div>
+
 ## `0x05 / run`
 ```bash
 # option 1: static
@@ -129,6 +175,14 @@ python -m http.server 8080
 
 ---
 
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=900&pause=1100&color=EF4444&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20DOCTRINE%20%5D%20%3A%3A%20OPERATOR%20MODE%20---"
+    alt="divider doctrine"
+  />
+</div>
+
 ## `0x06 / operator doctrine`
 > “Skill is clarity under pressure.”
 
@@ -137,6 +191,14 @@ python -m http.server 8080
 - **Boring-secure** → explicit validation, escaping, boundaries  
 
 ---
+
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=850&pause=1200&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20WRITEUP%20FORGE%20%5D%20%3A%3A%20RENDERING%20ARTIFACTS%20---"
+    alt="divider writeup"
+  />
+</div>
 
 ## `0x07 / writeup forge`
 <details>
@@ -158,6 +220,14 @@ python -m http.server 8080
 
 ---
 
+<!-- MATRIX SECTION DIVIDER -->
+<div align="center">
+  <img
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=900&pause=1100&color=22C55E&center=true&vCenter=true&width=1100&height=45&lines=---%20%5B%20ROADMAP%20%5D%20%3A%3A%20QUEUED%20---"
+    alt="divider roadmap"
+  />
+</div>
+
 ## `0x08 / roadmap`
 ```text
 [PHASE 1] Content → data model
@@ -169,8 +239,9 @@ python -m http.server 8080
 
 <div align="center">
 
+<!-- FOOTER (terminal) -->
 <img
-  src="https://capsule-render.vercel.app/api?type=rect&color=0:05070F,100:05070F&height=130&section=footer&text=stay%20legal&fontSize=40&fontColor=EF4444&animation=fadeIn"
+  src="https://capsule-render.vercel.app/api?type=rect&color=0:05070F,100:05070F&height=140&section=footer&text=stay%20legal&fontSize=40&fontColor=EF4444&stroke=22C55E&strokeWidth=1&animation=fadeIn"
   alt="footer"
 />
 
